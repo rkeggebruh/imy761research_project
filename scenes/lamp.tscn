@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://bd8p25kavhp0u"]
+
+[ext_resource type="Texture2D" uid="uid://cycvop82vr0ma" path="res://assets/furniture/lampOutline.png" id="1_60c0r"]
+[ext_resource type="Script" uid="uid://buwjwsqua0f16" path="res://scripts/lamp.gd" id="1_f2tjl"]
+[ext_resource type="Texture2D" uid="uid://bk68j4lsmikno" path="res://assets/furniture/lampon.png" id="2_f2tjl"]
+[ext_resource type="Texture2D" uid="uid://dcyb4utgu85s5" path="res://assets/furniture/lampOff.png" id="3_wd4c3"]
+
+[node name="Lamp" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_f2tjl")
+
+[node name="off" type="Sprite2D" parent="."]
+position = Vector2(-9, 71)
+texture = ExtResource("3_wd4c3")
+
+[node name="on" type="Sprite2D" parent="."]
+texture = ExtResource("2_f2tjl")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-17, 27, -32, 483, 5, 477, 13, 21)
+
+[node name="lampArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="lampArea"]
+polygon = PackedVector2Array(-173, -529, -251, -221, -85, -180, -90, 542, -154, 634, -108, 689, 89, 707, 190, 680, 140, 574, 75, 537, 80, -180, 232, -235, 190, -566)
+
+[node name="outline" type="Sprite2D" parent="."]
+position = Vector2(-8, 70)
+texture = ExtResource("1_60c0r")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="area_entered" from="lampArea" to="." method="_on_lamp_area_area_entered"]
+[connection signal="area_exited" from="lampArea" to="." method="_on_lamp_area_area_exited"]

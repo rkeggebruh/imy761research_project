@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://bjwh7eaeqvw4n"]
+
+[ext_resource type="Script" uid="uid://h50ovuqi7hjf" path="res://scripts/couch_left.gd" id="1_2y3hc"]
+[ext_resource type="Texture2D" uid="uid://cadh6v2667f48" path="res://assets/furniture/couchLeftOutline.png" id="1_lunjv"]
+[ext_resource type="Texture2D" uid="uid://0lkicqbhokil" path="res://assets/furniture/couch_side_l_nice.png" id="2_2y3hc"]
+
+[node name="couchLeft" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_2y3hc")
+
+[node name="outline" type="Sprite2D" parent="."]
+texture = ExtResource("1_lunjv")
+
+[node name="couch" type="Sprite2D" parent="."]
+texture = ExtResource("2_2y3hc")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-192, -195, -195, 203, -102, 213, 161, 212, 155, 161, 142, -194, -37, -194, -106, -194)
+
+[node name="couchLeftArea" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="couchLeftArea"]
+polygon = PackedVector2Array(-115, -416, -214, -397, -276, -195, -252, 342, -99, 427, 199, 388, 272, 272, 244, -283, 89, -346)
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="area_entered" from="couchLeftArea" to="." method="_on_couch_left_area_area_entered"]
+[connection signal="area_exited" from="couchLeftArea" to="." method="_on_couch_left_area_area_exited"]

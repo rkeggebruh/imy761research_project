@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://bhlrguma5dtsr"]
+
+[ext_resource type="Texture2D" uid="uid://cegt3vsdt0s48" path="res://assets/trees/spritesheet.png" id="1_sq02d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i5pww"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(1353, 0, 1353, 1652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxx8l"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(2706, 0, 1353, 1652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_excpj"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(5412, 0, 1353, 1652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cybpa"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(6765, 0, 1353, 1652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohcmn"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(8118, 0, 1353, 1652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0w8s"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(9471, 0, 1353, 1652)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqqfp"]
+atlas = ExtResource("1_sq02d")
+region = Rect2(0, 0, 1353, 1652)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u85bb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i5pww")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxx8l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_excpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cybpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohcmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0w8s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqqfp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Tree_one" type="Node2D"]
+y_sort_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u85bb")
+autoplay = "default"
+frame = 6
+frame_progress = 0.204761
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-113, 344, -102, 562, 52, 554, 11, 314)

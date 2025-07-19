@@ -1,0 +1,77 @@
+[gd_scene load_steps=11 format=3 uid="uid://ctvntps3t1rwp"]
+
+[ext_resource type="Script" uid="uid://0j13f6odmknw" path="res://scripts/tv.gd" id="1_ovwuf"]
+[ext_resource type="Texture2D" uid="uid://be7huobu125e6" path="res://assets/furniture/TV_OUTLINE_New.png" id="2_ie1qu"]
+[ext_resource type="Texture2D" uid="uid://bg8as8nbdyxmt" path="res://assets/furniture/TV_OFF_New.PNG" id="3_co5w5"]
+[ext_resource type="Texture2D" uid="uid://lmnp5vhloni8" path="res://assets/furniture/TV_ON_NEW.png" id="4_46idq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pbv82"]
+atlas = ExtResource("3_co5w5")
+region = Rect2(0, 0, 2048, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m8rr"]
+atlas = ExtResource("4_46idq")
+region = Rect2(0, 0, 2048, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4knv4"]
+atlas = ExtResource("4_46idq")
+region = Rect2(2048, 0, 2048, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daor5"]
+atlas = ExtResource("4_46idq")
+region = Rect2(4096, 0, 2048, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iqsce"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pbv82")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m8rr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4knv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daor5")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_egngg"]
+size = Vector2(905, 781)
+
+[node name="TV" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_ovwuf")
+
+[node name="outline" type="Sprite2D" parent="."]
+position = Vector2(0.4375, 2.62497)
+texture = ExtResource("2_ie1qu")
+
+[node name="tvAnimatedSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_iqsce")
+animation = &"off"
+
+[node name="tv_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tv_area"]
+position = Vector2(-4.5, -48.5)
+shape = SubResource("RectangleShape2D_egngg")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-328, -73, -408, 37, 441, 28, 384, -81)
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="area_entered" from="tv_area" to="." method="_on_tv_area_area_entered"]
+[connection signal="area_exited" from="tv_area" to="." method="_on_tv_area_area_exited"]

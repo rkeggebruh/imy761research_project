@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://duhnmvhilx116"
+path="res://.godot/imported/mrs_otter.dialogue-d4e26c22739c28df67060a448f606ff3.tres"
+
+[deps]
+
+source_file="res://dialogue/mrs_otter.dialogue"
+dest_files=["res://.godot/imported/mrs_otter.dialogue-d4e26c22739c28df67060a448f606ff3.tres"]
+
+[params]
+
+defaults=true
