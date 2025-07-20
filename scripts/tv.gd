@@ -4,6 +4,8 @@ var tvOn = false
 var isInTvArea = false
 var countdown_index = 0
 var countdown_labels = []
+var current_label: Label = null
+
 
 func _process(delta):
 	if isInTvArea:
@@ -37,20 +39,25 @@ func start_countdown():
 
 func _on_Timer_timeout():
 	if countdown_index < countdown_labels.size():
-		var current_label = countdown_labels[countdown_index]
+		if current_label:
+			current_label.hide()  # Hide previous immediately before showing next
+
+		current_label = countdown_labels[countdown_index]
 		current_label.show()
-		$Timer2.start()  # Start timer to hide this label
 		countdown_index += 1
-		$Timer.start()   # Continue to next number
+
+		$Timer2.start()
+		$Timer.start()
 	else:
-		# Restart countdown
-		start_countdown()
+		start_countdown()  # Restart loop
+
 
 
 
 func _on_Timer2_timeout():
-	if countdown_index > 0:
-		countdown_labels[countdown_index - 1].hide()
+	if current_label:
+		current_label.hide()
+
 
 
 

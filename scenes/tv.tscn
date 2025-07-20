@@ -174,10 +174,9 @@ theme_override_font_sizes/font_size = 80
 text = "t"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.2
+wait_time = 0.3
 
 [node name="Timer2" type="Timer" parent="."]
-wait_time = 0.2
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="tv_area" to="." method="_on_tv_area_area_entered"]
