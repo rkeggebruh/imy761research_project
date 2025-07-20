@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=18 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://bthcmebhntyja" path="res://assets/tileset/Grass.png" id="2_yqjtg"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://de0y03m51g4t5" path="res://audio/Star Covered Sky.mp3" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://d1d0jgm407loh" path="res://scenes/boom_box.tscn" id="10_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bd8p25kavhp0u" path="res://scenes/lamp.tscn" id="11_dinhu"]
+[ext_resource type="Resource" uid="uid://dk5kjr52iofxn" path="res://dialogue/Lamp.dialogue" id="12_kvuet"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -93,6 +94,9 @@ sources/1 = SubResource("TileSetAtlasSource_lnu2h")
 [sub_resource type="CircleShape2D" id="CircleShape2D_gee14"]
 radius = 220.737
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_trtic"]
+size = Vector2(150, 1213.33)
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -142,8 +146,16 @@ position = Vector2(-214, -401)
 scale = Vector2(0.4, 0.4)
 
 [node name="Lamp" parent="environmental_objects" instance=ExtResource("11_dinhu")]
-position = Vector2(55.9999, -316)
-scale = Vector2(0.2, 0.2)
+position = Vector2(-187, -51)
+scale = Vector2(0.3, 0.3)
+
+[node name="Actionable" parent="environmental_objects/Lamp" instance=ExtResource("4_p57ef")]
+position = Vector2(56.6667, 316.667)
+dialogue_resource = ExtResource("12_kvuet")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environmental_objects/Lamp/Actionable"]
+position = Vector2(-60.0001, -256.667)
+shape = SubResource("RectangleShape2D_trtic")
 
 [node name="mainGameSoundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0tnpc")

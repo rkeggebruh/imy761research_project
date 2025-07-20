@@ -10,8 +10,10 @@ func _getInput():
 	
 	if direction.x < 0:
 		$AnimatedSprite2D.play("walk_left")
+		$butterflyHelper.flip_h = false
 	elif direction.x > 0:
 		$AnimatedSprite2D.play("walk_right")
+		$butterflyHelper.flip_h = true
 	elif direction.y < 0:
 		$AnimatedSprite2D.play("walk_back")
 	elif direction.y > 0:

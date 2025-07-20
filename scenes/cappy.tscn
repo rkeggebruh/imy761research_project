@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://chrdxaqwo4jua"]
+[gd_scene load_steps=65 format=3 uid="uid://chrdxaqwo4jua"]
 
 [ext_resource type="Script" uid="uid://dt183x16xydy5" path="res://scripts/cappy.gd" id="1_jv0ww"]
 [ext_resource type="Texture2D" uid="uid://0n68xqxxhvsa" path="res://assets/Cappy/cappy_idle.png" id="1_kjp84"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c45v2w0dydmi8" path="res://assets/Cappy/capp_walk_LR.png" id="4_bbfcd"]
 [ext_resource type="Texture2D" uid="uid://cdiw5buuxmqux" path="res://assets/Cappy/cappy_walk_F.png" id="4_hxx0s"]
 [ext_resource type="Texture2D" uid="uid://jm822rv3muwd" path="res://assets/Cappy/capp_walk-left.png" id="5_4jcj1"]
+[ext_resource type="Texture2D" uid="uid://dwrwwcnolhij" path="res://assets/butterflyHelper/butterfly.png" id="7_hxx0s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r0dxc"]
 atlas = ExtResource("1_kjp84")
@@ -361,6 +362,63 @@ height = 540.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_jv0ww"]
 radius = 196.125
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5aws"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(0, 0, 191, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyuwo"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(191, 0, 191, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ti4mv"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(382, 0, 191, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_umuj7"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(573, 0, 191, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wmr12"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(764, 0, 191, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b8py"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(955, 0, 191, 169)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jevjx"]
+atlas = ExtResource("7_hxx0s")
+region = Rect2(1146, 0, 191, 169)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhy0n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5aws")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyuwo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ti4mv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_umuj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wmr12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b8py")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jevjx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="Cappy" type="CharacterBody2D"]
 script = ExtResource("1_jv0ww")
 
@@ -389,3 +447,10 @@ collision_mask = 16
 [node name="CollisionShape2D" type="CollisionShape2D" parent="direction/ActionableFinder"]
 position = Vector2(2, 9)
 shape = SubResource("CircleShape2D_jv0ww")
+
+[node name="butterflyHelper" type="AnimatedSprite2D" parent="."]
+position = Vector2(277, -135)
+sprite_frames = SubResource("SpriteFrames_mhy0n")
+autoplay = "default"
+frame = 4
+frame_progress = 0.787683
