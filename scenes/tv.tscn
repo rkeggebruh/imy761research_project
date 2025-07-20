@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://ctvntps3t1rwp"]
+[gd_scene load_steps=12 format=3 uid="uid://ctvntps3t1rwp"]
 
 [ext_resource type="Script" uid="uid://0j13f6odmknw" path="res://scripts/tv.gd" id="1_ovwuf"]
 [ext_resource type="Texture2D" uid="uid://be7huobu125e6" path="res://assets/furniture/TV_OUTLINE_New.png" id="2_ie1qu"]
 [ext_resource type="Texture2D" uid="uid://bg8as8nbdyxmt" path="res://assets/furniture/TV_OFF_New.PNG" id="3_co5w5"]
 [ext_resource type="Texture2D" uid="uid://lmnp5vhloni8" path="res://assets/furniture/TV_ON_NEW.png" id="4_46idq"]
+[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="5_ie1qu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbv82"]
 atlas = ExtResource("3_co5w5")
@@ -54,12 +55,12 @@ y_sort_enabled = true
 script = ExtResource("1_ovwuf")
 
 [node name="outline" type="Sprite2D" parent="."]
-position = Vector2(0.4375, 2.62497)
 texture = ExtResource("2_ie1qu")
 
 [node name="tvAnimatedSprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_iqsce")
-animation = &"off"
+animation = &"on"
+autoplay = "off"
 
 [node name="tv_area" type="Area2D" parent="."]
 
@@ -71,6 +72,112 @@ shape = SubResource("RectangleShape2D_egngg")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-328, -73, -408, 37, 441, 28, 384, -81)
+
+[node name="10" type="Label" parent="."]
+offset_left = 156.0
+offset_top = -572.0
+offset_right = 450.0
+offset_bottom = -454.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "n"
+
+[node name="9" type="Label" parent="."]
+offset_left = 111.0
+offset_top = -569.0
+offset_right = 405.0
+offset_bottom = -451.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "ó"
+
+[node name="8" type="Label" parent="."]
+offset_left = 92.0
+offset_top = -567.0
+offset_right = 386.0
+offset_bottom = -449.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "i"
+
+[node name="7" type="Label" parent="."]
+offset_left = 52.0
+offset_top = -570.0
+offset_right = 346.0
+offset_bottom = -452.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "s"
+
+[node name="6" type="Label" parent="."]
+offset_left = 33.0
+offset_top = -568.0
+offset_right = 327.0
+offset_bottom = -450.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "i"
+
+[node name="5" type="Label" parent="."]
+offset_left = -3.0
+offset_top = -576.0
+offset_right = 291.0
+offset_bottom = -458.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "v"
+
+[node name="4" type="Label" parent="."]
+offset_left = -41.0
+offset_top = -569.0
+offset_right = 253.0
+offset_bottom = -451.0
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "e"
+
+[node name="3" type="Label" parent="."]
+offset_left = -58.0
+offset_top = -570.833
+offset_right = 236.0
+offset_bottom = -452.833
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "l"
+
+[node name="2" type="Label" parent="."]
+offset_left = -98.0
+offset_top = -570.833
+offset_right = 196.0
+offset_bottom = -452.833
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "e"
+
+[node name="1" type="Label" parent="."]
+offset_left = -125.0
+offset_top = -570.833
+offset_right = 169.0
+offset_bottom = -452.833
+theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
+theme_override_fonts/font = ExtResource("5_ie1qu")
+theme_override_font_sizes/font_size = 80
+text = "t"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 0.2
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="tv_area" to="." method="_on_tv_area_area_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=13 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" uid="uid://d1wt4ma6055l8" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
@@ -73,6 +73,15 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5ei8"]
+bg_color = Color(0.47451, 0.745098, 0.901961, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1337t"]
+bg_color = Color(0.475528, 0.746658, 0.901954, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kmygl"]
+bg_color = Color(0.201727, 0.458273, 0.594391, 1)
+
 [node name="ExampleBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_36de5")
@@ -144,10 +153,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.5
-offset_top = -35.0
-offset_right = 290.5
-offset_bottom = 35.0
+offset_left = 40.0
+offset_top = 260.0
+offset_right = 621.0
+offset_bottom = 330.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 8
@@ -157,7 +166,11 @@ script = ExtResource("3_72ixx")
 response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_r5ei8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1337t")
+theme_override_styles/normal = SubResource("StyleBoxFlat_kmygl")
 text = "Response example"
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
