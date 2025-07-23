@@ -5,6 +5,7 @@ var lampFirstInteraction = false
 var lampCorrect = false
 var inLamp = false
 var lampInstructionInput = "What is lamp in Spanish?"
+var lampCanBeSwitchedOn = false
 
 
 var inTV = false

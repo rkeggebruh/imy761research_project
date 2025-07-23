@@ -5,12 +5,16 @@ var lampOn = false
 
 func _process(delta):
 	if inLampArea:
-		if Input.is_action_just_released("ui_accept") && !lampOn:
+		if State.lampCanBeSwitchedOn:
 			$on.show()
 			lampOn = true
-		elif Input.is_action_just_released("ui_accept") && lampOn:
-			$on.hide()
-			lampOn = false
+		#if Input.is_action_just_released("ui_accept") && !lampOn:
+			#if State.lampCanBeSwitchedOn:
+				#$on.show()
+				#lampOn = true
+		#elif Input.is_action_just_released("ui_accept") && lampOn:
+			#$on.hide()
+			#lampOn = false
 
 func _on_ready() -> void:
 	$outline.hide()
