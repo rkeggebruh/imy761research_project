@@ -30,6 +30,7 @@
 
 
 ~ start
+set State.is_in_dialog = true
 if State.lampFirstInteraction == false:
 	Mari: Oh Cappy, that's a [wave]Lamp[/wave].
 	Cappy: Oh cool.
@@ -69,4 +70,5 @@ else:
 	- lámpara
 	- lamp
 	- lámpo
+set State.is_in_dialog = false
 => END

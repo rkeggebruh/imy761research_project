@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://cat6bf5o1pag8"]
+
+[ext_resource type="Texture2D" uid="uid://dncskk3f8inr7" path="res://assets/environment/river_sprite.png" id="1_s00bq"]
+[ext_resource type="AudioStream" uid="uid://68wkiau2ri4n" path="res://audio/environment/pond_loopablemp3.mp3" id="2_manwy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_manwy"]
+atlas = ExtResource("1_s00bq")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0ang"]
+atlas = ExtResource("1_s00bq")
+region = Rect2(1920, 0, 1920, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc0ln"]
+atlas = ExtResource("1_s00bq")
+region = Rect2(3840, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uc0vf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_manwy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0ang")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc0ln")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="river" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_uc0vf")
+autoplay = "default"
+frame = 2
+frame_progress = 0.334489
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_manwy")
+volume_db = 10.0
+autoplay = true
+max_distance = 1500.0
+parameters/looping = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-959, 37, -798, -15, -730, -72, -633, -131, -593, -171, -558, -220, -504, -260, -431, -270, -216, -248, -117, -220, 53, -225, 98, -175, 154, -112, 267, -53, 442, -39, 472, -83, 456, -147, 463, -206, 498, -279, 534, -312, 729, -336, 862, -324, 961, -303, 961, -123, 954, 48, 906, 62, 866, 27, 811, 28, 743, 35, 685, 119, 647, 162, 632, 238, 626, 296, 565, 333, 487, 341, 342, 331, 222.141, 332.898, 110, 312, 59, 317, 15, 293, -52, 254, -138, 263, -233, 247, -310, 256, -390, 268, -469, 312, -555, 320, -618, 309, -714, 339, -798, 378, -864, 388, -920, 391, -942, 386, -964, 313, -961, 242, -956, 190, -954, 112, -954, 84)

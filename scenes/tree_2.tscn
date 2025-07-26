@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqt4d8cjhrkpe"]
+
+[ext_resource type="Texture2D" uid="uid://cx6aryxsoimc6" path="res://assets/trees/newTree.png" id="1_iekdm"]
+
+[node name="tree2" type="Node2D"]
+y_sort_enabled = true
+
+[node name="NewTree" type="Sprite2D" parent="."]
+position = Vector2(146, -70)
+texture = ExtResource("1_iekdm")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(100, -401)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-157, 819, -119, 870, -136, 934, -60, 948, -51, 823)

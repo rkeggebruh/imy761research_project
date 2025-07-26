@@ -1,0 +1,140 @@
+[gd_scene load_steps=10 format=3 uid="uid://bjhfsh32a4pq3"]
+
+[ext_resource type="Script" uid="uid://gxpkav534kq6" path="res://scripts/coat_rack.gd" id="1_itcit"]
+[ext_resource type="Texture2D" uid="uid://01ppyqqojjgh" path="res://assets/furniture/hookOutline-Photoroom.png" id="2_7232u"]
+[ext_resource type="Texture2D" uid="uid://cahqyy43tlbi3" path="res://assets/furniture/hook.png" id="2_f2ocr"]
+[ext_resource type="Texture2D" uid="uid://g7aluj0ue6s4" path="res://assets/textLabels/Perchero.png" id="2_hc3ly"]
+[ext_resource type="AudioStream" uid="uid://bxk0o6sxlgat" path="res://audio/vocabAudio/Perchero.mp3" id="5_hc3ly"]
+
+[sub_resource type="Animation" id="Animation_det1j"]
+resource_name = "fadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Perchero:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.136819, 0.103846), Vector2(0.501668, 0.380769)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Perchero:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(548, 575), Vector2(549, 641.5)]
+}
+
+[sub_resource type="Animation" id="Animation_uns7v"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Perchero:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.501668, 0.380769)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Perchero:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(549, 641.5)]
+}
+
+[sub_resource type="Animation" id="Animation_hc3ly"]
+resource_name = "fadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Perchero:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.501668, 0.380769), Vector2(0.136819, 0.103846)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Perchero:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(549, 641.5), Vector2(548, 575)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8oi6j"]
+_data = {
+&"RESET": SubResource("Animation_uns7v"),
+&"fadeIn": SubResource("Animation_det1j"),
+&"fadeOut": SubResource("Animation_hc3ly")
+}
+
+[node name="coatRack" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_itcit")
+
+[node name="Perchero" type="Sprite2D" parent="."]
+self_modulate = Color(1, 1, 0.352941, 1)
+z_index = -1
+position = Vector2(549, 641.5)
+scale = Vector2(0.501668, 0.380769)
+texture = ExtResource("2_hc3ly")
+
+[node name="outline" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(558.5, 244.271)
+scale = Vector2(0.2445, 0.2445)
+texture = ExtResource("2_7232u")
+
+[node name="Hook" type="Sprite2D" parent="."]
+position = Vector2(557, 243)
+texture = ExtResource("2_f2ocr")
+
+[node name="coatRackArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="coatRackArea"]
+polygon = PackedVector2Array(311, -85, 326, 634, 518, 714, 739, 665, 786, 457, 783, -150, 645, -225, 451, -246)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(533, 416, 536, 511, 555, 511, 553, 412)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_8oi6j")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hc3ly")
+volume_db = 10.0
+
+[connection signal="area_entered" from="coatRackArea" to="." method="_on_coat_rack_area_area_entered"]
+[connection signal="area_exited" from="coatRackArea" to="." method="_on_coat_rack_area_area_exited"]

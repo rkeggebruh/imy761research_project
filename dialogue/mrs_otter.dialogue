@@ -1,4 +1,6 @@
 ~ start
+set State.is_in_dialog = true
 Cappy: [[Hi|Hello|Howdy]], this is some dialogue.
 Mrs Otter: Here are some choices.
+set State.is_in_dialog = false
 => END

@@ -1,25 +1,86 @@
-[gd_scene load_steps=2 format=3 uid="uid://cburbl1chb524"]
+[gd_scene load_steps=6 format=3 uid="uid://cburbl1chb524"]
 
 [ext_resource type="Script" uid="uid://dfg1j3hti5mda" path="res://scripts/input.gd" id="1_jt1lk"]
+[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="2_6gs7a"]
 
-[node name="input" type="Node2D"]
+[sub_resource type="LabelSettings" id="LabelSettings_ovd13"]
+font = ExtResource("2_6gs7a")
+font_size = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovd13"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gs7a"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="inputTV" type="Node2D"]
 script = ExtResource("1_jt1lk")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 8.0
 offset_top = 120.0
-offset_right = 163.0
-offset_bottom = 143.0
+offset_right = 205.0
+offset_bottom = 181.0
+label_settings = SubResource("LabelSettings_ovd13")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 8.0
+offset_top = 220.0
+offset_right = 205.0
+offset_bottom = 294.0
+label_settings = SubResource("LabelSettings_ovd13")
 
 [node name="LineEdit" type="LineEdit" parent="."]
-offset_left = 4.0
-offset_top = 42.0
-offset_right = 355.0
-offset_bottom = 112.0
+offset_left = 79.0
+offset_right = 227.0
+offset_bottom = 82.0
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
+theme_override_fonts/font = ExtResource("2_6gs7a")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_ovd13")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6gs7a")
+max_length = 1
+
+[node name="LineEdit2" type="LineEdit" parent="."]
+offset_left = 204.0
+offset_right = 352.0
+offset_bottom = 82.0
+theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
+theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
+theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
+theme_override_fonts/font = ExtResource("2_6gs7a")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxFlat_ovd13")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6gs7a")
+max_length = 1
 
 [node name="instruction" type="Label" parent="."]
-offset_left = 5.0
-offset_top = 10.0
-offset_right = 127.0
-offset_bottom = 33.0
-text = "Your answer to:"
+offset_left = 2.0
+offset_right = 63.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("2_6gs7a")
+theme_override_font_sizes/font_size = 50
+text = "Tel"
+
+[node name="instruction2" type="Label" parent="."]
+offset_left = 111.0
+offset_right = 198.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("2_6gs7a")
+theme_override_font_sizes/font_size = 50
+text = "visió"
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2(77, 61)
+points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+width = 5.0
+default_color = Color(0.504511, 0.920221, 1, 1)
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2(210, 61)
+points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+width = 5.0
+default_color = Color(0.504511, 0.920221, 1, 1)

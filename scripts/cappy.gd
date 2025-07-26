@@ -5,21 +5,23 @@ const SPEED = 300.0
 @onready var actionable_finder: Area2D = $direction/ActionableFinder
 
 func _getInput():
-	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = direction * SPEED
-	
-	if direction.x < 0:
-		$AnimatedSprite2D.play("walk_left")
-		$butterflyHelper.flip_h = false
-	elif direction.x > 0:
-		$AnimatedSprite2D.play("walk_right")
-		$butterflyHelper.flip_h = true
-	elif direction.y < 0:
-		$AnimatedSprite2D.play("walk_back")
-	elif direction.y > 0:
-		$AnimatedSprite2D.play("walk_front")
+	if State.is_in_dialog:
+		velocity = Vector2.ZERO
 	else:
-		$AnimatedSprite2D.play("idle")
+		var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+		velocity = direction * SPEED
+		if direction.x < 0:
+			$AnimatedSprite2D.play("walk_left")
+			$Path2D/path2dFollowButterfly/butterflyHelper.flip_h = false
+		elif direction.x > 0:
+			$AnimatedSprite2D.play("walk_right")
+			$Path2D/path2dFollowButterfly/butterflyHelper.flip_h = true
+		elif direction.y < 0:
+			$AnimatedSprite2D.play("walk_back")
+		elif direction.y > 0:
+			$AnimatedSprite2D.play("walk_front")
+		else:
+			$AnimatedSprite2D.play("idle")
 
 func _physics_process(delta):
 	_getInput()

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://da7o6yuv151bt"
+path="res://.godot/imported/tv.dialogue-f8c67fb88c60f8f330e87ae6f0de8d84.tres"
+
+[deps]
+
+source_file="res://dialogue/tv.dialogue"
+dest_files=["res://.godot/imported/tv.dialogue-f8c67fb88c60f8f330e87ae6f0de8d84.tres"]
+
+[params]
+
+defaults=true

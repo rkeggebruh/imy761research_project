@@ -5,21 +5,29 @@ var isInTvArea = false
 var countdown_index = 0
 var countdown_labels = []
 var current_label: Label = null
-
+var enterOnce = false
 
 func _process(delta):
-	if isInTvArea:
-		if Input.is_action_just_released("ui_accept") && !tvOn:
-			$tvAnimatedSprite.play('on')
-			start_countdown()
-			tvOn = true
-		elif Input.is_action_just_released("ui_accept") && tvOn:
-			$tvAnimatedSprite.play('off')
-			tvOn = false
+	if isInTvArea && !enterOnce:
+		start_countdown()
+		enterOnce = true
+	
+	if isInTvArea && State.TVFillInLettersCorrect:
+		$tvAnimatedSprite.play('on')
+		tvOn = true
+		
+		#if Input.is_action_just_released("ui_accept") && !tvOn && State.TVFillInLettersCorrect:
+			#$tvAnimatedSprite.play('on')
+			#start_countdown()
+			#tvOn = true
+		#elif Input.is_action_just_released("ui_accept") && tvOn && State.TVFillInLettersCorrect:
+			#$tvAnimatedSprite.play('off')
+			#tvOn = false
 
 
 func _on_tv_area_area_entered(area: Area2D) -> void:
 	if(area.name == "cappy"):
+		$AudioStreamPlayer2D.play()
 		isInTvArea = true
 		$outline.show()
 

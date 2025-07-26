@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctvntps3t1rwp"]
+[gd_scene load_steps=16 format=3 uid="uid://ctvntps3t1rwp"]
 
 [ext_resource type="Script" uid="uid://0j13f6odmknw" path="res://scripts/tv.gd" id="1_ovwuf"]
 [ext_resource type="Texture2D" uid="uid://be7huobu125e6" path="res://assets/furniture/TV_OUTLINE_New.png" id="2_ie1qu"]
 [ext_resource type="Texture2D" uid="uid://bg8as8nbdyxmt" path="res://assets/furniture/TV_OFF_New.PNG" id="3_co5w5"]
 [ext_resource type="Texture2D" uid="uid://lmnp5vhloni8" path="res://assets/furniture/TV_ON_NEW.png" id="4_46idq"]
 [ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="5_ie1qu"]
+[ext_resource type="PackedScene" uid="uid://dyics0kkgnyn2" path="res://helpers/actionable.tscn" id="6_46idq"]
+[ext_resource type="Resource" uid="uid://da7o6yuv151bt" path="res://dialogue/tv.dialogue" id="7_pbv82"]
+[ext_resource type="AudioStream" uid="uid://cusu8si372aam" path="res://audio/vocabAudio/tv.mp3" id="8_pbv82"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbv82"]
 atlas = ExtResource("3_co5w5")
@@ -50,6 +53,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_egngg"]
 size = Vector2(905, 781)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_46idq"]
+size = Vector2(912, 783)
+
 [node name="TV" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_ovwuf")
@@ -74,109 +80,119 @@ shape = SubResource("RectangleShape2D_egngg")
 polygon = PackedVector2Array(-328, -73, -408, 37, 441, 28, 384, -81)
 
 [node name="10" type="Label" parent="."]
-offset_left = 156.0
-offset_top = -572.0
-offset_right = 450.0
-offset_bottom = -454.0
+offset_left = 225.0
+offset_top = -636.0
+offset_right = 519.0
+offset_bottom = -445.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "n"
 
 [node name="9" type="Label" parent="."]
-offset_left = 111.0
-offset_top = -569.0
-offset_right = 405.0
-offset_bottom = -451.0
+offset_left = 159.0
+offset_top = -633.0
+offset_right = 453.0
+offset_bottom = -442.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "ó"
 
 [node name="8" type="Label" parent="."]
-offset_left = 92.0
-offset_top = -567.0
-offset_right = 386.0
-offset_bottom = -449.0
+offset_left = 136.0
+offset_top = -631.0
+offset_right = 430.0
+offset_bottom = -440.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "i"
 
 [node name="7" type="Label" parent="."]
-offset_left = 52.0
-offset_top = -570.0
-offset_right = 346.0
-offset_bottom = -452.0
+offset_left = 73.0
+offset_top = -634.0
+offset_right = 367.0
+offset_bottom = -443.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "s"
 
 [node name="6" type="Label" parent="."]
-offset_left = 33.0
-offset_top = -568.0
-offset_right = 327.0
-offset_bottom = -450.0
+offset_left = 50.0
+offset_top = -632.0
+offset_right = 344.0
+offset_bottom = -441.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "i"
 
 [node name="5" type="Label" parent="."]
-offset_left = -3.0
-offset_top = -576.0
-offset_right = 291.0
-offset_bottom = -458.0
+offset_top = -640.0
+offset_right = 294.0
+offset_bottom = -449.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "v"
 
 [node name="4" type="Label" parent="."]
-offset_left = -41.0
-offset_top = -569.0
-offset_right = 253.0
-offset_bottom = -451.0
+offset_left = -52.0
+offset_top = -633.0
+offset_right = 242.0
+offset_bottom = -442.0
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "e"
 
 [node name="3" type="Label" parent="."]
-offset_left = -58.0
-offset_top = -570.833
-offset_right = 236.0
-offset_bottom = -452.833
+offset_left = -74.0
+offset_top = -634.833
+offset_right = 220.0
+offset_bottom = -443.833
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "l"
 
 [node name="2" type="Label" parent="."]
-offset_left = -98.0
-offset_top = -570.833
-offset_right = 196.0
-offset_bottom = -452.833
+offset_left = -133.0
+offset_top = -634.833
+offset_right = 161.0
+offset_bottom = -443.833
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "e"
 
 [node name="1" type="Label" parent="."]
-offset_left = -125.0
-offset_top = -570.833
-offset_right = 169.0
-offset_bottom = -452.833
+offset_left = -182.0
+offset_top = -634.833
+offset_right = 112.0
+offset_bottom = -443.833
 theme_override_colors/font_color = Color(0.550664, 0.658339, 0.311129, 1)
 theme_override_fonts/font = ExtResource("5_ie1qu")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 130
 text = "t"
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 
 [node name="Timer2" type="Timer" parent="."]
+
+[node name="Actionable" parent="." instance=ExtResource("6_46idq")]
+dialogue_resource = ExtResource("7_pbv82")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Actionable"]
+position = Vector2(-5, -46.5)
+shape = SubResource("RectangleShape2D_46idq")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_pbv82")
+volume_db = 10.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="tv_area" to="." method="_on_tv_area_area_entered"]
