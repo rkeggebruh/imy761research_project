@@ -8,7 +8,7 @@ extends Node2D
 var enterOnce = false
 
 func _ready():
-	State.is_in_dialog = true
+	#State.is_in_dialog = true
 	$".".hide()
 	
 	#if State.inLamp:
@@ -16,14 +16,18 @@ func _ready():
 	
 	line_edit.text_submitted.connect(_on_line_editText_entered)
 	line_edit2.text_submitted.connect(_on_line_editText2_entered)
+	line_edit.focus_exited.connect(_on_line_edit_focus_exited)
+	line_edit2.focus_exited.connect(_on_line_edit2_focus_exited)
 
 func _process(_delta):
 	if !enterOnce && State.FillInTVLetterTime:
 		$".".show()
+		State.is_in_dialog = true
 		enterOnce = true
 	
 	if State.letterNTVCorrect && State.letterETVCorrect:
 		State.TVFillInLettersCorrect = true
+		$".".hide()
 		State.is_in_dialog = false
 
 func _on_line_editText_entered(text: String) -> void:
@@ -40,3 +44,10 @@ func _on_line_editText2_entered(text: String) -> void:
 	if State.FillInTVLetterTime && text == "n":
 		label2.text = "Excelente! " + text
 		State.letterNTVCorrect = true
+
+
+func _on_line_edit_focus_exited() -> void:
+	_on_line_editText_entered(line_edit.text)
+
+func _on_line_edit2_focus_exited() -> void:
+	_on_line_editText2_entered(line_edit2.text)
