@@ -1,20 +1,19 @@
-[gd_scene load_steps=19 format=3 uid="uid://cburbl1chb524"]
+[gd_scene load_steps=18 format=3 uid="uid://dy4makuslhcrv"]
 
-[ext_resource type="Script" uid="uid://dfg1j3hti5mda" path="res://scripts/input.gd" id="1_jt1lk"]
-[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="2_6gs7a"]
-[ext_resource type="Texture2D" uid="uid://be7huobu125e6" path="res://assets/furniture/TV_OUTLINE_New.png" id="3_ovd13"]
-[ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="4_8p10g"]
-[ext_resource type="Texture2D" uid="uid://xchr4j2gmdf2" path="res://assets/environment/lavender_blow.png" id="5_2f4ux"]
+[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_4c1qb"]
+[ext_resource type="Texture2D" uid="uid://be7huobu125e6" path="res://assets/furniture/TV_OUTLINE_New.png" id="2_8wu5v"]
+[ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="3_7g1gg"]
+[ext_resource type="Texture2D" uid="uid://xchr4j2gmdf2" path="res://assets/environment/lavender_blow.png" id="4_eeeus"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_ovd13"]
-font = ExtResource("2_6gs7a")
+[sub_resource type="LabelSettings" id="LabelSettings_eyt42"]
+font = ExtResource("1_4c1qb")
 font_size = 50
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovd13"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_072xu"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6gs7a"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xjhgf"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_2f4ux"]
@@ -55,30 +54,30 @@ _data = {
 }
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_db1xo"]
-atlas = ExtResource("5_2f4ux")
+atlas = ExtResource("4_eeeus")
 region = Rect2(0, 0, 114, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnxrp"]
-atlas = ExtResource("5_2f4ux")
+atlas = ExtResource("4_eeeus")
 region = Rect2(114, 0, 114, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_202w0"]
-atlas = ExtResource("5_2f4ux")
+atlas = ExtResource("4_eeeus")
 region = Rect2(228, 0, 114, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_01jcy"]
-atlas = ExtResource("5_2f4ux")
+atlas = ExtResource("4_eeeus")
 region = Rect2(342, 0, 114, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e8l08"]
-atlas = ExtResource("5_2f4ux")
+atlas = ExtResource("4_eeeus")
 region = Rect2(456, 0, 114, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_im1m0"]
-atlas = ExtResource("5_2f4ux")
+atlas = ExtResource("4_eeeus")
 region = Rect2(570, 0, 114, 126)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_85lhe"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_074rl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -104,93 +103,99 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="inputTV" type="Node2D"]
-position = Vector2(-120, -269)
-script = ExtResource("1_jt1lk")
+[node name="controlInputTV_E_N" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -1408.0
 offset_top = -992.0
 offset_right = 1692.0
 offset_bottom = 978.0
-color = Color(0, 0, 0, 0.584314)
+color = Color(0, 0, 0, 0.309804)
 
 [node name="Label" type="Label" parent="."]
-offset_left = -117.0
-offset_top = -156.0
-offset_right = 80.0
-offset_bottom = -82.0
-label_settings = SubResource("LabelSettings_ovd13")
+offset_left = 8.0
+offset_top = 120.0
+offset_right = 205.0
+offset_bottom = 181.0
+label_settings = SubResource("LabelSettings_eyt42")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = -117.0
-offset_top = -56.0
-offset_right = 80.0
-offset_bottom = 18.0
-label_settings = SubResource("LabelSettings_ovd13")
+offset_left = 8.0
+offset_top = 220.0
+offset_right = 205.0
+offset_bottom = 294.0
+label_settings = SubResource("LabelSettings_eyt42")
 
 [node name="LineEdit" type="LineEdit" parent="."]
-offset_left = -46.0
-offset_top = -276.0
-offset_right = 102.0
-offset_bottom = -194.0
+offset_left = 79.0
+offset_right = 227.0
+offset_bottom = 82.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
-theme_override_fonts/font = ExtResource("2_6gs7a")
+theme_override_fonts/font = ExtResource("1_4c1qb")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_ovd13")
-theme_override_styles/normal = SubResource("StyleBoxFlat_6gs7a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_072xu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjhgf")
 max_length = 1
 
 [node name="LineEdit2" type="LineEdit" parent="."]
-offset_left = 79.0
-offset_top = -276.0
-offset_right = 227.0
-offset_bottom = -194.0
+offset_left = 204.0
+offset_right = 352.0
+offset_bottom = 82.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
-theme_override_fonts/font = ExtResource("2_6gs7a")
+theme_override_fonts/font = ExtResource("1_4c1qb")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_ovd13")
-theme_override_styles/normal = SubResource("StyleBoxFlat_6gs7a")
+theme_override_styles/focus = SubResource("StyleBoxFlat_072xu")
+theme_override_styles/normal = SubResource("StyleBoxFlat_xjhgf")
 max_length = 1
 
 [node name="instruction" type="Label" parent="."]
-offset_left = -123.0
-offset_top = -276.0
-offset_right = -62.0
-offset_bottom = -202.0
-theme_override_fonts/font = ExtResource("2_6gs7a")
+offset_left = 2.0
+offset_right = 63.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("1_4c1qb")
 theme_override_font_sizes/font_size = 50
 text = "Tel"
 
 [node name="instruction2" type="Label" parent="."]
-offset_left = -14.0
-offset_top = -276.0
-offset_right = 73.0
-offset_bottom = -202.0
-theme_override_fonts/font = ExtResource("2_6gs7a")
+offset_left = 111.0
+offset_right = 198.0
+offset_bottom = 74.0
+theme_override_fonts/font = ExtResource("1_4c1qb")
 theme_override_font_sizes/font_size = 50
 text = "visió"
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2(-48, -215)
+position = Vector2(77, 61)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(85, -215)
+position = Vector2(210, 61)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="TvOutlineNew" type="Sprite2D" parent="."]
-position = Vector2(-9, 71)
+position = Vector2(116, 347)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("3_ovd13")
+texture = ExtResource("2_8wu5v")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -198,22 +203,16 @@ libraries = {
 }
 
 [node name="Excelente!" type="Sprite2D" parent="."]
-position = Vector2(-11, -24)
+position = Vector2(114, 252)
 scale = Vector2(0.0166666, 0.0166666)
-texture = ExtResource("4_8p10g")
+texture = ExtResource("3_7g1gg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-311, 151)
-sprite_frames = SubResource("SpriteFrames_85lhe")
+position = Vector2(-186, 427)
+sprite_frames = SubResource("SpriteFrames_074rl")
 autoplay = "default"
-frame = 1
-frame_progress = 0.49903
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(306, 151)
-sprite_frames = SubResource("SpriteFrames_85lhe")
+position = Vector2(431, 427)
+sprite_frames = SubResource("SpriteFrames_074rl")
 autoplay = "default"
-frame = 1
-frame_progress = 0.49903
-
-[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

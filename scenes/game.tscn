@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=30 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bjhfsh32a4pq3" path="res://scenes/coat_rack.tscn" id="17_37s47"]
 [ext_resource type="Texture2D" uid="uid://cr8hp4xn4skiw" path="res://assets/environment/bamboo.PNG" id="17_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://drae1h3jgtodh" path="res://assets/furniture/rug.png" id="19_1kice"]
+[ext_resource type="PackedScene" uid="uid://5g2qdhad3qwc" path="res://scenes/input_tv_off_t_l_i.tscn" id="23_bt5mj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("3_264po")
@@ -250,7 +251,7 @@ autoplay = true
 parameters/looping = true
 
 [node name="inputTV" parent="." instance=ExtResource("15_ca42v")]
-position = Vector2(446, -486)
+position = Vector2(305, -472)
 
 [node name="bamboos" type="Node2D" parent="."]
 z_index = -3
@@ -316,5 +317,8 @@ z_index = -1
 position = Vector2(532, -48)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("19_1kice")
+
+[node name="inputTvOff_T_L_I" parent="." instance=ExtResource("23_bt5mj")]
+position = Vector2(296, -478)
 
 [connection signal="ready" from="." to="." method="_on_ready"]

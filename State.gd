@@ -17,4 +17,11 @@ var FillInTVLetterTime = false
 var letterETVCorrect = false
 var letterNTVCorrect = false
 
+var letterTTVCorrectOff = false
+var letterLTVCorrectOff = false
+var letterITVCorrectOff = false
+
+var tvOn = false
+var FillInTVLetterTimeTVOFF = false
+
 var is_in_dialog: bool = false

@@ -15,14 +15,16 @@ func _process(delta):
 	if isInTvArea && State.TVFillInLettersCorrect:
 		$tvAnimatedSprite.play('on')
 		tvOn = true
+		State.tvOn = true
 		
 		#if Input.is_action_just_released("ui_accept") && !tvOn && State.TVFillInLettersCorrect:
 			#$tvAnimatedSprite.play('on')
 			#start_countdown()
 			#tvOn = true
-		#elif Input.is_action_just_released("ui_accept") && tvOn && State.TVFillInLettersCorrect:
-			#$tvAnimatedSprite.play('off')
-			#tvOn = false
+	if isInTvArea && State.FillInTVLetterTimeTVOFF:
+		$tvAnimatedSprite.play('off')
+		tvOn = false
+		State.tvOn = false
 
 
 func _on_tv_area_area_entered(area: Area2D) -> void:
