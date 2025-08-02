@@ -7,6 +7,15 @@ var inLamp = false
 var lampInstructionInput = "What is lamp in Spanish?"
 var lampCanBeSwitchedOn = false
 
+var lampFillInLettersTimeOn = false
+var letterLampLCorrect = false
+var letterLampACorrect = false
+var lampFillInLettersOnCorrect = false
+
+var lampFillInLettersTimeOff = false
+var letterLampACorrectOff = false
+var letterLampRCorrectOff = false
+var lampFillInLettersOffCorrect = false
 
 # ------------------------------- TV -------------------------------
 var inTV = false

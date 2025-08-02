@@ -35,40 +35,42 @@ if State.lampFirstInteraction == false:
 	Mari: Oh Cappy, that's a [wave]Lamp[/wave].
 	Cappy: Oh cool.
 	Mari: If you want light, you have to tell me what it is... in Spanish!
+	
+	set State.lampFillInLettersTimeOn = true
 		
-	Cappy: hmm, ok, lets give this a shot
-	- lámpara
-		Mari: ¡Muy bien! Yes, I'm a [wave][b]lámpara[/b]![/wave] Now let there be light!
-		set State.lampFirstInteraction = true
-		set State.lampCorrect = true
-		set State.lampCanBeSwitchedOn = true
-	- lamp
-		Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
-		- lámpara
-			Mari: ¡Muy bien! Yes, I'm a [wave][b]lámpara[/b]![/wave] Now let there be light!
-			set State.lampCorrect = true
-			set State.lampCanBeSwitchedOn = true
-			break
-		- lamp
-			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
-		- lámpo
-			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
-	- lámpo
-		Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
-		- lámpara
-			Mari: ¡Muy bien! Yes, I'm a [wave][b]lámpara[/b]![/wave] Now let there be light!
-			set State.lampCorrect = true
-			set State.lampCanBeSwitchedOn = true
-			break
-		- lamp
-			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
-		- lámpo
-			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
-else:
-	Mari: Oh Cappy, you know this one! Tell me again what it is
-	Cappy: ooh yes it's a...
-	- lámpara
-	- lamp
-	- lámpo
+#	Cappy: hmm, ok, lets give this a shot
+#	- lámpara
+#		Mari: ¡Muy bien! Yes, I'm a [wave][b]lámpara[/b]![/wave] Now let there be light!
+#		set State.lampFirstInteraction = true
+#		set State.lampCorrect = true
+#		set State.lampCanBeSwitchedOn = true
+#	- lamp
+#		Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
+#		- lámpara
+#			Mari: ¡Muy bien! Yes, I'm a [wave][b]lámpara[/b]![/wave] Now let there be light!
+#			set State.lampCorrect = true
+#			set State.lampCanBeSwitchedOn = true
+#			break
+#		- lamp
+#			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
+#		- lámpo
+#			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
+#	- lámpo
+#		Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
+#		- lámpara
+#			Mari: ¡Muy bien! Yes, I'm a [wave][b]lámpara[/b]![/wave] Now let there be light!
+#			set State.lampCorrect = true
+#			set State.lampCanBeSwitchedOn = true
+#			break
+#		- lamp
+#			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
+#		- lámpo
+#			Mari: Hmm, not quite. Try again... Hint: it starts with "lám..."
+#else:
+#	Mari: Oh Cappy, you know this one! Tell me again what it is
+#	Cappy: ooh yes it's a...
+#	- lámpara
+#	- lamp
+#	- lámpo
 set State.is_in_dialog = false
 => END
