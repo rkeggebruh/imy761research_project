@@ -17,6 +17,18 @@ var letterLampACorrectOff = false
 var letterLampRCorrectOff = false
 var lampFillInLettersOffCorrect = false
 
+# ------------------------------- BOOMBOX -------------------------------
+
+var boomBoxFillInLettersTimeOn = false
+#var letterLampLCorrect = false
+#var letterLampACorrect = false
+var boomBoxFillInLettersOnCorrect = false
+
+var boomBoxFillInLettersTimeOff = false
+#var letterLampACorrectOff = false
+#var letterLampRCorrectOff = false
+var boomBoxFillInLettersOffCorrect = false
+
 # ------------------------------- TV -------------------------------
 var inTV = false
 var TVFirstInteraction = false
@@ -32,5 +44,8 @@ var letterITVCorrectOff = false
 
 var tvOn = false
 var FillInTVLetterTimeTVOFF = false
+
+
+# ------------------------- CAPPY MOVEMENT -------------------------
 
 var is_in_dialog: bool = false

@@ -1,15 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://dicf310eeacbb"]
+[gd_scene load_steps=10 format=3 uid="uid://cp3q0sk8a4vk1"]
 
-[ext_resource type="Script" uid="uid://p4gdh1erril4" path="res://scripts/input_lamp_on.gd" id="1_4nhs5"]
-[ext_resource type="Texture2D" uid="uid://bk68j4lsmikno" path="res://assets/furniture/lampon.png" id="2_yghcm"]
-[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="3_2sx5j"]
-[ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="4_yghcm"]
+[ext_resource type="Script" uid="uid://c8me5rsquc7v6" path="res://scripts/input_boom_box_off.gd" id="1_l6flh"]
+[ext_resource type="Texture2D" uid="uid://bk68j4lsmikno" path="res://assets/furniture/lampon.png" id="2_pfj1v"]
+[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="3_1lk4n"]
+[ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="4_0ubnl"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jleqy"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4wwg"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jc4vj"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7qcby"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_db1xo"]
@@ -49,8 +49,8 @@ _data = {
 &"anim": SubResource("Animation_2f4ux")
 }
 
-[node name="input_LampOn" type="Node2D"]
-script = ExtResource("1_4nhs5")
+[node name="input_boomBox_Off" type="Node2D"]
+script = ExtResource("1_l6flh")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8
@@ -69,7 +69,7 @@ color = Color(0, 0, 0, 0.403922)
 [node name="Lampon" type="Sprite2D" parent="."]
 position = Vector2(-3, -48)
 scale = Vector2(0.384943, 0.384943)
-texture = ExtResource("2_yghcm")
+texture = ExtResource("2_pfj1v")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 z_index = 2
@@ -80,11 +80,12 @@ offset_bottom = -304.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
-theme_override_fonts/font = ExtResource("3_2sx5j")
+theme_override_fonts/font = ExtResource("3_1lk4n")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_jleqy")
-theme_override_styles/normal = SubResource("StyleBoxFlat_jc4vj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_t4wwg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7qcby")
 max_length = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit2" type="LineEdit" parent="."]
 z_index = 3
@@ -95,29 +96,32 @@ offset_bottom = -304.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
-theme_override_fonts/font = ExtResource("3_2sx5j")
+theme_override_fonts/font = ExtResource("3_1lk4n")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_jleqy")
-theme_override_styles/normal = SubResource("StyleBoxFlat_jc4vj")
+theme_override_styles/focus = SubResource("StyleBoxFlat_t4wwg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7qcby")
 max_length = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="instruction" type="Label" parent="."]
 offset_left = -137.0
 offset_top = -386.0
 offset_right = -57.0
 offset_bottom = -312.0
-theme_override_fonts/font = ExtResource("3_2sx5j")
+theme_override_fonts/font = ExtResource("3_1lk4n")
 theme_override_font_sizes/font_size = 50
 text = "amp"
+metadata/_edit_use_anchors_ = true
 
 [node name="instruction2" type="Label" parent="."]
 offset_left = 5.0
 offset_top = -386.0
 offset_right = 144.0
 offset_bottom = -312.0
-theme_override_fonts/font = ExtResource("3_2sx5j")
+theme_override_fonts/font = ExtResource("3_1lk4n")
 theme_override_font_sizes/font_size = 50
 text = "ra"
+metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="."]
 position = Vector2(-42, -325)
@@ -134,7 +138,7 @@ default_color = Color(0.504511, 0.920221, 1, 1)
 [node name="Excelente!" type="Sprite2D" parent="."]
 position = Vector2(-11, -24)
 scale = Vector2(0.0166666, 0.0166666)
-texture = ExtResource("4_yghcm")
+texture = ExtResource("4_0ubnl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

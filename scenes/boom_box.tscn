@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1d0jgm407loh"]
+[gd_scene load_steps=6 format=3 uid="uid://d1d0jgm407loh"]
 
 [ext_resource type="Script" uid="uid://ciu6e8clker" path="res://scripts/boom_box.gd" id="1_6i3w5"]
 [ext_resource type="Texture2D" uid="uid://bg00arjojgous" path="res://assets/furniture/boomBoxOutline.png" id="2_jbcuw"]
 [ext_resource type="Texture2D" uid="uid://dqjgioclflfyt" path="res://assets/furniture/boomBox.png" id="3_m65dv"]
 [ext_resource type="AudioStream" uid="uid://b6nahdqy4ssyn" path="res://audio/vocabAudio/laRadio.mp3" id="4_jbcuw"]
+[ext_resource type="Texture2D" uid="uid://c0stthpvw6j5i" path="res://assets/textLabels/La Radio.png" id="5_m65dv"]
 
 [node name="boomBox" type="Node2D"]
 y_sort_enabled = true
@@ -28,6 +29,10 @@ polygon = PackedVector2Array(-237, -46, -287, -13, -288, 22, 293, 25, 296, -44, 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_jbcuw")
 volume_db = 10.0
+
+[node name="LaRadio" type="Sprite2D" parent="."]
+position = Vector2(57, -403)
+texture = ExtResource("5_m65dv")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="boomboxArea" to="." method="_on_boombox_area_area_entered"]
