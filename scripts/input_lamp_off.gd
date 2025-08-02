@@ -33,12 +33,10 @@ func _process(_delta):
 
 func _on_line_editText_entered(text: String) -> void:
 	if State.lampFillInLettersTimeOff && text == "a":
-		#print("the letter l is correct--------------- ")
 		State.letterLampACorrectOff = true
 
 func _on_line_editText2_entered(text: String) -> void:
 	if State.lampFillInLettersTimeOff && text == "r":
-		#print("the letter p is correct-------------- ")
 		State.letterLampRCorrectOff = true
 
 func _on_line_edit_focus_exited() -> void:
