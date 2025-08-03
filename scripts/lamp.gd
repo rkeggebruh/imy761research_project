@@ -4,11 +4,14 @@ var inLampArea = false
 var lampOn = false
 var fade_time := 0.0
 
+
+#Check - going to need to change this code a bit so that the lamp can only be switched on
+# off after they have filled in the letters correctly
 func _process(delta):
-	if inLampArea:
-		if State.lampCanBeSwitchedOn:
-			$on.show()
-			lampOn = true
+	if inLampArea && State.lampFillInLettersOnCorrect:
+		#if State.lampCanBeSwitchedOn:
+		$on.show()
+		lampOn = true
 		#if Input.is_action_just_released("ui_accept") && !lampOn:
 			#if State.lampCanBeSwitchedOn:
 				#$on.show()

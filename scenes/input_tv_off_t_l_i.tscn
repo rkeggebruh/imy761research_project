@@ -133,9 +133,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
 z_index = 2
-offset_left = -46.0
+offset_left = -134.0
 offset_top = -276.0
-offset_right = 102.0
+offset_right = 14.0
 offset_bottom = -194.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -149,9 +149,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit2" type="LineEdit" parent="."]
 z_index = 3
-offset_left = 42.0
+offset_left = -55.0
 offset_top = -276.0
-offset_right = 190.0
+offset_right = 93.0
 offset_bottom = -194.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -191,9 +191,9 @@ default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="LineEdit3" type="LineEdit" parent="."]
 z_index = 1
-offset_left = -130.0
+offset_left = 42.0
 offset_top = -276.0
-offset_right = 18.0
+offset_right = 190.0
 offset_bottom = -194.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -241,3 +241,5 @@ autoplay = "default"
 position = Vector2(306, 151)
 sprite_frames = SubResource("SpriteFrames_x8au3")
 autoplay = "default"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

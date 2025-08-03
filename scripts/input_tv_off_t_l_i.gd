@@ -29,8 +29,9 @@ func _process(_delta):
 		State.is_in_dialog = true
 		enterOnce = true
 	
-	if State.letterTTVCorrectOff && State.letterTTVCorrectOff && State.letterITVCorrectOff:
-		State.TVFillInLettersCorrect = true
+	if State.letterLTVCorrectOff && State.letterTTVCorrectOff && State.letterITVCorrectOff:
+		print("------------------ TV LETTERS OFF CORRECT")
+		State.TVFillInLettersCorrectOff = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()
@@ -40,6 +41,7 @@ func _process(_delta):
 		$Line2D3.hide()
 		$LineEdit.hide()
 		$LineEdit2.hide()
+		$LineEdit3.hide()
 		$instruction.hide()
 		$instruction2.hide()
 		#$".".hide()
@@ -47,24 +49,30 @@ func _process(_delta):
 
 func _on_line_editText_entered(text: String) -> void:
 	label.text  = "Answer: " + text
+	print("t input: ", text)
 	
 	if State.FillInTVLetterTimeTVOFF && text == "t":
 		label.text = "Correcto! " + text
+		print("------------------ T LETTERS OFF CORRECT")
 		State.letterTTVCorrectOff = true
 
 
 func _on_line_editText2_entered(text: String) -> void:
 	label2.text  = "Answer: " + text
+	print("l input: ", text)
 	
 	if State.FillInTVLetterTimeTVOFF && text == "l":
 		label2.text = "Excelente! " + text
+		print("------------------ L LETTERS OFF CORRECT")
 		State.letterLTVCorrectOff = true
 
 func _on_line_editText3_entered(text: String) -> void:
 	label2.text  = "Answer: " + text
+	print("i input: ", text)
 	
 	if State.FillInTVLetterTimeTVOFF && text == "i":
 		label2.text = "Excelente! " + text
+		print("------------------ I LETTERS OFF CORRECT")
 		State.letterITVCorrectOff = true
 
 func _on_line_edit_focus_exited() -> void:

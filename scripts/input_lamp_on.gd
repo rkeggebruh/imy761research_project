@@ -44,3 +44,8 @@ func _on_line_edit_focus_exited() -> void:
 
 func _on_line_edit2_focus_exited() -> void:
 	_on_line_editText2_entered(line_edit2.text)
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$".".hide()
+	State.is_in_dialog = false

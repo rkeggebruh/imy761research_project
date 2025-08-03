@@ -33,7 +33,10 @@ var boomBoxFillInLettersOffCorrect = false
 var inTV = false
 var TVFirstInteraction = false
 var TVINstructionInput = "What is TV in Spanish?"
+
 var TVFillInLettersCorrect = false
+var TVFillInLettersCorrectOff = false
+
 var FillInTVLetterTime = false
 var letterETVCorrect = false
 var letterNTVCorrect = false

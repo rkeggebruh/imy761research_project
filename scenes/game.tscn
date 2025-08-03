@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=32 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://drae1h3jgtodh" path="res://assets/furniture/rug.png" id="19_1kice"]
 [ext_resource type="PackedScene" uid="uid://5g2qdhad3qwc" path="res://scenes/input_tv_off_t_l_i.tscn" id="23_bt5mj"]
 [ext_resource type="PackedScene" uid="uid://dicf310eeacbb" path="res://scenes/input_lamp_on.tscn" id="24_e1j6l"]
+[ext_resource type="PackedScene" uid="uid://c85fohkb2hsem" path="res://scenes/input_lamp_off.tscn" id="25_pl11u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("3_264po")
@@ -323,5 +324,7 @@ texture = ExtResource("19_1kice")
 position = Vector2(296, -478)
 
 [node name="input_LampOn" parent="." instance=ExtResource("24_e1j6l")]
+
+[node name="input_LampOff" parent="." instance=ExtResource("25_pl11u")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]

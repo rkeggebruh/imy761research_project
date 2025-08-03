@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c85fohkb2hsem"]
+[gd_scene load_steps=18 format=3 uid="uid://c85fohkb2hsem"]
 
 [ext_resource type="Script" uid="uid://cjukp6q36pbqq" path="res://scripts/input_lamp_off.gd" id="1_y6tlf"]
 [ext_resource type="Texture2D" uid="uid://bk68j4lsmikno" path="res://assets/furniture/lampon.png" id="2_bqbvo"]
 [ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="3_vqeju"]
 [ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="4_bhlu0"]
+[ext_resource type="Texture2D" uid="uid://cqreut6tmer4u" path="res://assets/environment/poppy_blow.png" id="5_bqbvo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnoy6"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -49,6 +50,56 @@ _data = {
 &"anim": SubResource("Animation_2f4ux")
 }
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqeju"]
+atlas = ExtResource("5_bqbvo")
+region = Rect2(0, 0, 102, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhlu0"]
+atlas = ExtResource("5_bqbvo")
+region = Rect2(102, 0, 102, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnoy6"]
+atlas = ExtResource("5_bqbvo")
+region = Rect2(204, 0, 102, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_db8ro"]
+atlas = ExtResource("5_bqbvo")
+region = Rect2(306, 0, 102, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7o1t"]
+atlas = ExtResource("5_bqbvo")
+region = Rect2(408, 0, 102, 105)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s35s"]
+atlas = ExtResource("5_bqbvo")
+region = Rect2(510, 0, 102, 105)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ko0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqeju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhlu0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnoy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_db8ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7o1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s35s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="input_LampOff" type="Node2D"]
 script = ExtResource("1_y6tlf")
 
@@ -73,9 +124,9 @@ texture = ExtResource("2_bqbvo")
 
 [node name="LineEdit" type="LineEdit" parent="."]
 z_index = 2
-offset_left = -186.0
+offset_left = -106.0
 offset_top = -386.0
-offset_right = -38.0
+offset_right = 42.0
 offset_bottom = -304.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -89,9 +140,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit2" type="LineEdit" parent="."]
 z_index = 3
-offset_left = -41.0
+offset_left = 39.0
 offset_top = -386.0
-offset_right = 107.0
+offset_right = 187.0
 offset_bottom = -304.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -104,9 +155,9 @@ max_length = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction" type="Label" parent="."]
-offset_left = -206.0
+offset_left = -126.0
 offset_top = -386.0
-offset_right = -62.0
+offset_right = 37.0
 offset_bottom = -312.0
 theme_override_fonts/font = ExtResource("3_vqeju")
 theme_override_font_sizes/font_size = 50
@@ -114,9 +165,9 @@ text = "L   mpa"
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction2" type="Label" parent="."]
-offset_left = 5.0
+offset_left = 85.0
 offset_top = -386.0
-offset_right = 144.0
+offset_right = 224.0
 offset_bottom = -312.0
 theme_override_fonts/font = ExtResource("3_vqeju")
 theme_override_font_sizes/font_size = 50
@@ -124,13 +175,13 @@ text = "a"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2(-42, -325)
+position = Vector2(38, -325)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(-180, -325)
+position = Vector2(-100, -325)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
@@ -144,3 +195,13 @@ texture = ExtResource("4_bhlu0")
 libraries = {
 &"": SubResource("AnimationLibrary_dnxrp")
 }
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-134, 164)
+sprite_frames = SubResource("SpriteFrames_5ko0l")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(123, 164)
+sprite_frames = SubResource("SpriteFrames_5ko0l")
+autoplay = "default"
