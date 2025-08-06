@@ -424,7 +424,7 @@ position = Vector2(831, -72)
 scale = Vector2(0.4, 0.4)
 
 [node name="boomBox" parent="environmental_objects" instance=ExtResource("10_kvpfn")]
-position = Vector2(-214, -401)
+position = Vector2(-351, -450)
 scale = Vector2(0.4, 0.4)
 
 [node name="Lamp" parent="environmental_objects" instance=ExtResource("11_dinhu")]
@@ -677,6 +677,12 @@ texture = ExtResource("20_suyxu")
 [node name="Tree1" type="Sprite2D" parent="environmental_objects"]
 z_index = 8
 position = Vector2(1683, 424)
+scale = Vector2(0.310526, 0.310526)
+texture = ExtResource("21_sgl2t")
+
+[node name="Tree2" type="Sprite2D" parent="environmental_objects"]
+z_index = 8
+position = Vector2(1240, 625)
 scale = Vector2(0.310526, 0.310526)
 texture = ExtResource("21_sgl2t")
 
