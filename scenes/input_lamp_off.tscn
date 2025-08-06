@@ -205,3 +205,5 @@ autoplay = "default"
 position = Vector2(123, 164)
 sprite_frames = SubResource("SpriteFrames_5ko0l")
 autoplay = "default"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

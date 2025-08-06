@@ -12,6 +12,7 @@ var letterLampLCorrect = false
 var letterLampACorrect = false
 var lampFillInLettersOnCorrect = false
 
+var lampTurnOff = false
 var lampFillInLettersTimeOff = false
 var letterLampACorrectOff = false
 var letterLampRCorrectOff = false

@@ -24,6 +24,7 @@ func _process(_delta):
 		State.lampFillInLettersOnCorrect = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
+		State.lampTurnOff = true
 		$Line2D.hide()
 		$Line2D2.hide()
 		$LineEdit.hide()

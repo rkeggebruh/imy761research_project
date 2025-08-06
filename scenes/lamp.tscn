@@ -44,10 +44,10 @@ tracks/0/path = NodePath("Lámpara:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.566667),
+"times": PackedFloat32Array(0.0333333, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(1.69811, 1.69811)]
+"values": [Vector2(1, 1), Vector2(2.45283, 2.45283)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -56,10 +56,10 @@ tracks/1/path = NodePath("Lámpara:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.566667),
+"times": PackedFloat32Array(0, 0.6),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-8, -465), Vector2(-8, -566)]
+"values": [Vector2(-8, -465), Vector2(-8, -613)]
 }
 
 [sub_resource type="Animation" id="Animation_q4m2g"]
@@ -72,10 +72,10 @@ tracks/0/path = NodePath("Lámpara:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.46667),
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1.69811, 1.69811), Vector2(1, 1)]
+"values": [Vector2(2.45283, 2.45283), Vector2(1, 1)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -84,10 +84,10 @@ tracks/1/path = NodePath("Lámpara:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.46667),
+"times": PackedFloat32Array(0, 1.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-8, -566), Vector2(-8, -465)]
+"values": [Vector2(-8, -613), Vector2(-8, -465)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f3gd7"]
@@ -111,7 +111,7 @@ texture = ExtResource("2_f2tjl")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-17, 27, -32, 483, 5, 477, 13, 21)
+polygon = PackedVector2Array(-22, 215, -32, 483, 5, 477, 9, 210)
 
 [node name="lampArea" type="Area2D" parent="."]
 

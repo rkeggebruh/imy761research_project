@@ -14,3 +14,6 @@ func _process(_delta):
 	
 	$input_LampOn.position.x = $environmental_objects/Cappy.position.x
 	$input_LampOn.position.y = $environmental_objects/Cappy.position.y
+	
+	$input_LampOff.position.x = $environmental_objects/Cappy.position.x
+	$input_LampOff.position.y = $environmental_objects/Cappy.position.y

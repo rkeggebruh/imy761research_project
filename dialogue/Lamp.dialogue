@@ -37,6 +37,11 @@ if State.lampFirstInteraction == false:
 	Mari: If you want light, you have to tell me what it is... in Spanish!
 	
 	set State.lampFillInLettersTimeOn = true
+	set State.lampFirstInteraction = true
+if State.lampTurnOff == true:
+	Mari: Cappy, to turn off the lamp, complete the word for me
+	
+	set State.lampFillInLettersTimeOff = true
 		
 #	Cappy: hmm, ok, lets give this a shot
 #	- lámpara

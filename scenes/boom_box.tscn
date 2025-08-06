@@ -1,10 +1,100 @@
-[gd_scene load_steps=6 format=3 uid="uid://d1d0jgm407loh"]
+[gd_scene load_steps=10 format=3 uid="uid://d1d0jgm407loh"]
 
 [ext_resource type="Script" uid="uid://ciu6e8clker" path="res://scripts/boom_box.gd" id="1_6i3w5"]
 [ext_resource type="Texture2D" uid="uid://bg00arjojgous" path="res://assets/furniture/boomBoxOutline.png" id="2_jbcuw"]
 [ext_resource type="Texture2D" uid="uid://dqjgioclflfyt" path="res://assets/furniture/boomBox.png" id="3_m65dv"]
 [ext_resource type="AudioStream" uid="uid://b6nahdqy4ssyn" path="res://audio/vocabAudio/laRadio.mp3" id="4_jbcuw"]
 [ext_resource type="Texture2D" uid="uid://c0stthpvw6j5i" path="res://assets/textLabels/La Radio.png" id="5_m65dv"]
+
+[sub_resource type="Animation" id="Animation_m65dv"]
+resource_name = "in"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LaRadio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17.0001, 3.5), Vector2(17.0001, -337)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LaRadio:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.2125, 0.2125), Vector2(0.341667, 0.341667)]
+}
+
+[sub_resource type="Animation" id="Animation_vgl3b"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LaRadio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(57, -403)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LaRadio:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tdb8i"]
+resource_name = "out"
+length = 1.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LaRadio:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(17.0001, -337), Vector2(17.0001, 3.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LaRadio:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.341667, 0.341667), Vector2(0.2125, 0.2125)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6jbuu"]
+_data = {
+&"RESET": SubResource("Animation_vgl3b"),
+&"in": SubResource("Animation_m65dv"),
+&"out": SubResource("Animation_tdb8i")
+}
 
 [node name="boomBox" type="Node2D"]
 y_sort_enabled = true
@@ -31,8 +121,14 @@ stream = ExtResource("4_jbcuw")
 volume_db = 10.0
 
 [node name="LaRadio" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(57, -403)
 texture = ExtResource("5_m65dv")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_6jbuu")
+}
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="boomboxArea" to="." method="_on_boombox_area_area_entered"]
