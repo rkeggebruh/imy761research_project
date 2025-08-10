@@ -17,13 +17,15 @@ func _ready():
 func _process(_delta):
 	if !enterOnce && State.lampFillInLettersTimeOff:
 		$".".show()
+		print("do we enter here for dialogue off")
 		State.is_in_dialog = true
 		enterOnce = true
 	
 	if State.letterLampACorrectOff && State.letterLampRCorrectOff:
 		State.lampFillInLettersOffCorrect = true
+		State.twiceLamp = true
 		$"Excelente!".show()
-		$AnimationPlayer.play("anim")
+		$AnimationPlayerlampoff.play("anim")
 		$Line2D.hide()
 		$Line2D2.hide()
 		$LineEdit.hide()
@@ -45,7 +47,7 @@ func _on_line_edit_focus_exited() -> void:
 func _on_line_edit2_focus_exited() -> void:
 	_on_line_editText2_entered(line_edit2.text)
 
-
-func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+func _on_animation_playerlampoff_animation_finished(anim_name: StringName) -> void:
 	$".".hide()
+	$AnimationPlayerlampoff.stop()
 	State.is_in_dialog = false

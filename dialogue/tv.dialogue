@@ -5,6 +5,7 @@ if State.tvOn == true:
 	Mari: To turn off the TV, I need you to fill in the missing letters for me...
 	set State.FillInTVLetterTimeTVOFF = true
 else:
+	set State.is_in_dialog = true
 	Mari: Ah Cappy, do you want to watch TV?
 	Cappy: Si, I would love to watch TV
 	Mari: Alrighty then, to watch TV, I need you to fill in the missing letters for me...

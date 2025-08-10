@@ -128,6 +128,7 @@ libraries = {
 }
 
 [node name="Lámpara" type="Sprite2D" parent="."]
+modulate = Color(0.924029, 0.978865, 0.973182, 1)
 position = Vector2(-8, -566)
 texture = ExtResource("5_wd4c3")
 

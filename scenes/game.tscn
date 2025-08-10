@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=85 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://b5eptl7mds5nh" path="res://assets/environment/forrest1_anim.png" id="19_suyxu"]
 [ext_resource type="Texture2D" uid="uid://cx6aryxsoimc6" path="res://assets/trees/newTree.png" id="20_suyxu"]
 [ext_resource type="Texture2D" uid="uid://bqd8mouo0nnrr" path="res://assets/trees/tree1.png" id="21_sgl2t"]
+[ext_resource type="Resource" uid="uid://dq86so750sqgr" path="res://dialogue/perchero.dialogue" id="23_8ool0"]
 [ext_resource type="PackedScene" uid="uid://5g2qdhad3qwc" path="res://scenes/input_tv_off_t_l_i.tscn" id="23_bt5mj"]
 [ext_resource type="PackedScene" uid="uid://dicf310eeacbb" path="res://scenes/input_lamp_on.tscn" id="24_e1j6l"]
 [ext_resource type="PackedScene" uid="uid://c85fohkb2hsem" path="res://scenes/input_lamp_off.tscn" id="25_pl11u"]
@@ -38,6 +39,8 @@
 [ext_resource type="PackedScene" uid="uid://cp3q0sk8a4vk1" path="res://scenes/input_boom_box_off.tscn" id="35_gxtfn"]
 [ext_resource type="Texture2D" uid="uid://ddpslvv7n12y" path="res://assets/furniture/capySleepR.png" id="36_twgab"]
 [ext_resource type="PackedScene" uid="uid://dsjtc3oov25ei" path="res://scenes/input_couch_r_sleep.tscn" id="37_02fa5"]
+[ext_resource type="PackedScene" uid="uid://dqoj51uvmihih" path="res://scenes/game_instructions.tscn" id="39_7025r"]
+[ext_resource type="PackedScene" uid="uid://cm47qhdhg7cag" path="res://scenes/input_perchero_1.tscn" id="40_m4url"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("3_264po")
@@ -738,6 +741,12 @@ scale = Vector2(0.4, 0.4)
 position = Vector2(7, -788)
 scale = Vector2(0.5, 0.5)
 
+[node name="Actionable" parent="environmental_objects/coatRack" instance=ExtResource("4_p57ef")]
+dialogue_resource = ExtResource("23_8ool0")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="environmental_objects/coatRack/Actionable"]
+polygon = PackedVector2Array(506, 522, 402, 550, 430, 608, 534, 614, 672, 600, 704, 576, 672, 550, 630, 540, 608, 504, 626, 426, 650, 334, 576, 254, 470, 236, 492, 292, 466, 380)
+
 [node name="flowerbed" type="AnimatedSprite2D" parent="environmental_objects"]
 position = Vector2(1062, 329)
 scale = Vector2(0.6, 0.6)
@@ -969,5 +978,12 @@ autoplay = "default"
 [node name="input_couchR_sleep" parent="." instance=ExtResource("37_02fa5")]
 visible = false
 position = Vector2(0, 2)
+
+[node name="game_instructions" parent="." instance=ExtResource("39_7025r")]
+z_index = 500
+position = Vector2(-908, -357)
+
+[node name="input_perchero1" parent="." instance=ExtResource("40_m4url")]
+visible = false
 
 [connection signal="ready" from="." to="." method="_on_ready"]

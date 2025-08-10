@@ -32,6 +32,15 @@ var letterRadioRCorrectOff = false
 var letterRadioOCorrectOff = false
 var boomBoxFillInLettersOffCorrect = false
 
+
+# ------------------------------- COAT RACK -------------------------------
+
+var coatRackFillInLettersTimeOn = false
+var lettercoatRackPCorrect = false
+var lettercoatRackRCorrect = false
+var coatRackFillInLettersOnCorrect = false
+
+
 # ------------------------------- COUCH RIGHT -------------------------------
 
 var CRFillInLettersTimeSleep = false
@@ -69,3 +78,12 @@ var is_in_dialog: bool = false
 
 var otterMoving = false
 var otterSpeed = 0.09
+
+var instructionsShowing = true
+var hideInstructions = false
+
+# ------------------------ INPUT CONTROLS -----------------------------
+
+var twiceRadio = false
+var twiceLamp = false
+var twiceTv = false

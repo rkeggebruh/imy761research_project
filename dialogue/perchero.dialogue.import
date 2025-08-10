@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dq86so750sqgr"
+path="res://.godot/imported/perchero.dialogue-f157dc4367820d47635ab5ea2b06ac2c.tres"
+
+[deps]
+
+source_file="res://dialogue/perchero.dialogue"
+dest_files=["res://.godot/imported/perchero.dialogue-f157dc4367820d47635ab5ea2b06ac2c.tres"]
+
+[params]
+
+defaults=true

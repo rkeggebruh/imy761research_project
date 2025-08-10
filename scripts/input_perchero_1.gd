@@ -15,30 +15,30 @@ func _ready():
 	line_edit2.focus_exited.connect(_on_line_edit2_focus_exited)
 
 func _process(_delta):
-	if !enterOnce && State.lampFillInLettersTimeOn:
+	if !enterOnce && State.coatRackFillInLettersTimeOn:
 		$".".show()
 		State.is_in_dialog = true
 		enterOnce = true
 	
-	if State.letterLampLCorrect && State.letterLampACorrect:
-		State.lampFillInLettersOnCorrect = true
+	if State.lettercoatRackPCorrect && State.lettercoatRackRCorrect:
+		State.coatRackFillInLettersOnCorrect = true
 		$"Excelente!".show()
-		$AnimationPlayerlampOn.play("anim")
-		State.lampTurnOff = true
+		$AnimationPlayer.play("anim")
 		$Line2D.hide()
 		$Line2D2.hide()
 		$LineEdit.hide()
 		$LineEdit2.hide()
+		$instruction3.hide()
 		$instruction.hide()
-		$instruction2.hide()
 
 func _on_line_editText_entered(text: String) -> void:
-	if State.lampFillInLettersTimeOn && text == "l":
-		State.letterLampLCorrect = true
+	print("line for a, printed.. ", text)
+	if State.coatRackFillInLettersTimeOn && text == "p":
+		State.lettercoatRackPCorrect = true
 
 func _on_line_editText2_entered(text: String) -> void:
-	if State.lampFillInLettersTimeOn && text == "a":
-		State.letterLampACorrect = true
+	if State.coatRackFillInLettersTimeOn && text == "r":
+		State.lettercoatRackRCorrect = true
 
 func _on_line_edit_focus_exited() -> void:
 	_on_line_editText_entered(line_edit.text)
@@ -47,10 +47,6 @@ func _on_line_edit2_focus_exited() -> void:
 	_on_line_editText2_entered(line_edit2.text)
 
 
-func _on_animation_playerlamp_on_animation_finished(anim_name: StringName) -> void:
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	$".".hide()
-	$AnimationPlayerlampOn.stop()
-	print("switching dialogue to false---")
 	State.is_in_dialog = false
-	
-	$AnimationPlayerlampOn.disconnect("animation_finished", Callable(self, "_on_animation_playerlamp_on_animation_finished"))

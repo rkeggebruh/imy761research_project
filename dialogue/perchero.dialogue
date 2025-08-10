@@ -1,0 +1,8 @@
+~ start
+set State.is_in_dialog = true
+
+Mari: Ah, the coat rack, or as its better known as..
+set State.coatRackFillInLettersTimeOn = true
+
+
+=> END

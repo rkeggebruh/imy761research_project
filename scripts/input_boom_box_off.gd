@@ -28,6 +28,7 @@ func _process(_delta):
 	
 	if State.letterRadioLCorrectOff && State.letterRadioRCorrectOff && State.letterRadioOCorrectOff:
 		State.boomBoxFillInLettersOffCorrect = true
+		State.twiceRadio = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()

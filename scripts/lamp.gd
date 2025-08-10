@@ -12,6 +12,9 @@ func _process(delta):
 		#if State.lampCanBeSwitchedOn:
 		$on.show()
 		lampOn = true
+	if inLampArea && State.lampFillInLettersOffCorrect:
+		$on.hide()
+		lampOn = false
 		#if Input.is_action_just_released("ui_accept") && !lampOn:
 			#if State.lampCanBeSwitchedOn:
 				#$on.show()

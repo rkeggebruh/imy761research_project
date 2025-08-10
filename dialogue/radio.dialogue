@@ -1,16 +1,21 @@
 ~ start
 set State.is_in_dialog = true
 
-if State.radioOn == true:
-	Mari: To turn off the radio, I need you to fill in the missing letters for me...
-	set State.boomBoxFillInLettersTimeOff = true
+if State.twiceRadio:
+	Mari: Cappy, you have mastered the spelling of la radio.
+	Mari: perhaps you should buy it?
+	set State.is_in_dialog = false
 else:
-	Mari: Ah Cappy, do you want to listen to the radio?
-	Cappy: Si, I would love to listen
-	Mari: Alrighty then, I need you to fill in the missing letters for me...
-	set State.boomBoxFillInLettersTimeOn = true
+	if State.radioOn == true:
+		Mari: To turn off the radio, I need you to fill in the missing letters for me...
+		set State.boomBoxFillInLettersTimeOff = true
+	else:
+		Mari: Ah Cappy, do you want to listen to the radio?
+		Cappy: Si, I would love to listen
+		Mari: Alrighty then, I need you to fill in the missing letters for me...
+		set State.boomBoxFillInLettersTimeOn = true
 
 #if State.TVFillInLettersCorrect:
 #	Mari: yay, go Cappy
-set State.is_in_dialog = false
+#set State.is_in_dialog = false
 => END

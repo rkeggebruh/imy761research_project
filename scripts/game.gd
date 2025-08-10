@@ -29,6 +29,13 @@ func _process(_delta):
 	$input_couchR_sleep.position.x = $environmental_objects/Cappy.position.x
 	$input_couchR_sleep.position.y = $environmental_objects/Cappy.position.y
 	
+	$game_instructions.position.x = $environmental_objects/Cappy.position.x
+	$game_instructions.position.y = $environmental_objects/Cappy.position.y
+	
+	$input_perchero1.position.x = $environmental_objects/Cappy.position.x
+	$input_perchero1.position.y = $environmental_objects/Cappy.position.y
+	
+	
 	if (State.boomBoxFillInLettersOnCorrect && !enterOnce):
 		enterOnce = true
 		State.radioOn = true
@@ -56,3 +63,8 @@ func _process(_delta):
 		State.is_in_dialog = false
 		State.cappySleeping = false
 		$environmental_objects/Cappy.show()
+	
+	if State.instructionsShowing && Input.is_action_just_released("ui_accept"):
+		print("hiiiiiiiiiiide instructions")
+		State.instructionsShowing = false
+		State.hideInstructions = true
