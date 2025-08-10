@@ -293,20 +293,4 @@ position = Vector2(77.0613, 328)
 sprite_frames = SubResource("SpriteFrames_j6h0m")
 autoplay = "default"
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-modulate = Color(0.184314, 0.552941, 1, 0.345098)
-offset_left = 1017.0
-offset_top = -1724.0
-offset_right = 3017.0
-offset_bottom = -664.0
-rotation = 0.852921
-
-[node name="ColorRect3" type="ColorRect" parent="."]
-modulate = Color(0.184314, 0.552941, 1, 0.345098)
-offset_left = -1356.0
-offset_top = -496.0
-offset_right = 644.0
-offset_bottom = 564.0
-rotation = 0.852921
-
 [connection signal="ready" from="." to="." method="_on_ready"]
