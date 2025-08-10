@@ -203,8 +203,8 @@ script = ExtResource("1_wa1xs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_66vod")
-animation = &"idle"
-autoplay = "idle"
+animation = &"walk"
+autoplay = "walk"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=82 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -7,14 +7,16 @@
 [ext_resource type="PackedScene" uid="uid://baqkmtjgd6wjr" path="res://scenes/mrs_otter.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bhlrguma5dtsr" path="res://scenes/tree_one.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dyics0kkgnyn2" path="res://helpers/actionable.tscn" id="4_p57ef"]
+[ext_resource type="Script" uid="uid://d2i8y1mcl01fp" path="res://scripts/otter_path.gd" id="5_twgab"]
 [ext_resource type="Resource" uid="uid://duhnmvhilx116" path="res://dialogue/mrs_otter.dialogue" id="5_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://bjwh7eaeqvw4n" path="res://scenes/couch_left.tscn" id="7_gee14"]
 [ext_resource type="PackedScene" uid="uid://ctvntps3t1rwp" path="res://scenes/tv.tscn" id="7_vtaks"]
 [ext_resource type="PackedScene" uid="uid://pmqhmk878ped" path="res://scenes/couch_right.tscn" id="8_0tnpc"]
 [ext_resource type="AudioStream" uid="uid://de0y03m51g4t5" path="res://audio/Star Covered Sky.mp3" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://d1d0jgm407loh" path="res://scenes/boom_box.tscn" id="10_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bd8p25kavhp0u" path="res://scenes/lamp.tscn" id="11_dinhu"]
 [ext_resource type="Resource" uid="uid://dk5kjr52iofxn" path="res://dialogue/Lamp.dialogue" id="12_kvuet"]
+[ext_resource type="Resource" uid="uid://ck47jx85k345o" path="res://dialogue/couch_right.dialogue" id="12_nepv3"]
+[ext_resource type="Resource" uid="uid://dkdxq1g3s8rlg" path="res://dialogue/radio.dialogue" id="13_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://cat6bf5o1pag8" path="res://scenes/river.tscn" id="15_1kice"]
 [ext_resource type="PackedScene" uid="uid://cburbl1chb524" path="res://scenes/input.tscn" id="15_ca42v"]
 [ext_resource type="PackedScene" uid="uid://bqt4d8cjhrkpe" path="res://scenes/tree_2.tscn" id="16_5newe"]
@@ -30,7 +32,12 @@
 [ext_resource type="PackedScene" uid="uid://5g2qdhad3qwc" path="res://scenes/input_tv_off_t_l_i.tscn" id="23_bt5mj"]
 [ext_resource type="PackedScene" uid="uid://dicf310eeacbb" path="res://scenes/input_lamp_on.tscn" id="24_e1j6l"]
 [ext_resource type="PackedScene" uid="uid://c85fohkb2hsem" path="res://scenes/input_lamp_off.tscn" id="25_pl11u"]
+[ext_resource type="AudioStream" uid="uid://dsufi3x4issvv" path="res://audio/environment/Manu Chao - Me Gustas Tu (Instrumental).mp3" id="26_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bga6wdxx0w2xm" path="res://assets/environment/otter_house.png" id="28_sgl2t"]
+[ext_resource type="PackedScene" uid="uid://lih3tuu2gbvf" path="res://scenes/input_boom_box_on.tscn" id="30_js0lu"]
+[ext_resource type="PackedScene" uid="uid://cp3q0sk8a4vk1" path="res://scenes/input_boom_box_off.tscn" id="35_gxtfn"]
+[ext_resource type="Texture2D" uid="uid://ddpslvv7n12y" path="res://assets/furniture/capySleepR.png" id="36_twgab"]
+[ext_resource type="PackedScene" uid="uid://dsjtc3oov25ei" path="res://scenes/input_couch_r_sleep.tscn" id="37_02fa5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("3_264po")
@@ -132,6 +139,12 @@ sources/0 = SubResource("TileSetAtlasSource_e1j6l")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_264po"]
 size = Vector2(3410.5, 40.9998)
+
+[sub_resource type="Curve2D" id="Curve2D_v2yb1"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -80, 7.5, 0, 0, 0, 0, -607.5, -62.5, 0, 0, 0, 0, -975, -37.5, 0, 0, 0, 0, -917.5, 172.5, 0, 0, 0, 0, -382.5, 337.5, 0, 0, 0, 0, 285, 420, 0, 0, 0, 0, 807.5, 157.5, 0, 0, 0, 0, 1110, -137.5, 0, 0, 0, 0, 590, -115, 0, 0, 0, 0, -80, 12.5)
+}
+point_count = 10
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gee14"]
 radius = 220.737
@@ -319,6 +332,70 @@ size = Vector2(2297.5, 336)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgl2t"]
 size = Vector2(209, 1538)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_pf7vy"]
+atlas = ExtResource("36_twgab")
+region = Rect2(0, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8ni1"]
+atlas = ExtResource("36_twgab")
+region = Rect2(467, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3hbvx"]
+atlas = ExtResource("36_twgab")
+region = Rect2(934, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8j3a"]
+atlas = ExtResource("36_twgab")
+region = Rect2(1401, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ms3bu"]
+atlas = ExtResource("36_twgab")
+region = Rect2(1868, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ixpq"]
+atlas = ExtResource("36_twgab")
+region = Rect2(2335, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bk1p3"]
+atlas = ExtResource("36_twgab")
+region = Rect2(2802, 0, 467, 341)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8ral"]
+atlas = ExtResource("36_twgab")
+region = Rect2(3269, 0, 467, 341)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yd4ix"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pf7vy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8ni1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3hbvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q8j3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ms3bu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ixpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bk1p3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8ral")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_ir15t")
 
@@ -362,14 +439,25 @@ scale = Vector2(0.4, 0.4)
 
 [node name="Camera2D" type="Camera2D" parent="environmental_objects/Cappy"]
 
-[node name="mrs_otter" parent="environmental_objects" instance=ExtResource("3_lnu2h")]
+[node name="Path2D" type="Path2D" parent="environmental_objects"]
 position = Vector2(424, 249)
 scale = Vector2(0.4, 0.4)
+curve = SubResource("Curve2D_v2yb1")
 
-[node name="Actionable" parent="environmental_objects/mrs_otter" instance=ExtResource("4_p57ef")]
+[node name="otter_path" type="PathFollow2D" parent="environmental_objects/Path2D"]
+position = Vector2(-80, 7.5)
+rotation = -3.00966
+rotates = false
+script = ExtResource("5_twgab")
+
+[node name="mrs_otter" parent="environmental_objects/Path2D/otter_path" instance=ExtResource("3_lnu2h")]
+position = Vector2(-78.3181, 17.9587)
+rotation = 3.00966
+
+[node name="Actionable" parent="environmental_objects/Path2D/otter_path/mrs_otter" instance=ExtResource("4_p57ef")]
 dialogue_resource = ExtResource("5_u5sy4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="environmental_objects/mrs_otter/Actionable"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="environmental_objects/Path2D/otter_path/mrs_otter/Actionable"]
 shape = SubResource("CircleShape2D_gee14")
 
 [node name="TV" parent="environmental_objects" instance=ExtResource("7_vtaks")]
@@ -415,20 +503,30 @@ z_index = -5
 position = Vector2(1732, -604)
 scale = Vector2(0.3, 0.3)
 
-[node name="couchLeft" parent="environmental_objects" instance=ExtResource("7_gee14")]
-position = Vector2(257, -78)
-scale = Vector2(0.4, 0.4)
-
 [node name="couchRight" parent="environmental_objects" instance=ExtResource("8_0tnpc")]
 position = Vector2(831, -72)
 scale = Vector2(0.4, 0.4)
+
+[node name="Actionable" parent="environmental_objects/couchRight" instance=ExtResource("4_p57ef")]
+dialogue_resource = ExtResource("12_nepv3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="environmental_objects/couchRight/Actionable"]
+position = Vector2(-2077.5, 180)
+scale = Vector2(2.5, 2.5)
+polygon = PackedVector2Array(723, -182, 724, 9, 764, 94, 870, 102, 919, 79, 945, 28, 929, -225, 882, -235, 839, -228, 815, -206)
 
 [node name="boomBox" parent="environmental_objects" instance=ExtResource("10_kvpfn")]
 position = Vector2(-351, -450)
 scale = Vector2(0.4, 0.4)
 
+[node name="Actionable" parent="environmental_objects/boomBox" instance=ExtResource("4_p57ef")]
+dialogue_resource = ExtResource("13_v2yb1")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="environmental_objects/boomBox/Actionable"]
+polygon = PackedVector2Array(-117.5, -275, -200, -130, -325, -55, -327.5, 5, -245, 72.5, 267.5, 67.5, 337.5, -15, 272.5, -125, 207.5, -125, 135, -275)
+
 [node name="Lamp" parent="environmental_objects" instance=ExtResource("11_dinhu")]
-position = Vector2(-152, -86)
+position = Vector2(231, -20)
 scale = Vector2(0.3, 0.3)
 
 [node name="Actionable" parent="environmental_objects/Lamp" instance=ExtResource("4_p57ef")]
@@ -688,8 +786,12 @@ texture = ExtResource("21_sgl2t")
 
 [node name="mainGameSoundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0tnpc")
-volume_db = -80.0
 autoplay = true
+parameters/looping = true
+
+[node name="radioOn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_wljb1")
+volume_db = -5.0
 parameters/looping = true
 
 [node name="bamboos" type="Node2D" parent="."]
@@ -815,6 +917,10 @@ texture = ExtResource("19_1kice")
 visible = false
 position = Vector2(305, -472)
 
+[node name="input_boomBox_On" parent="." instance=ExtResource("30_js0lu")]
+visible = false
+position = Vector2(-351, -450)
+
 [node name="inputTvOff_T_L_I" parent="." instance=ExtResource("23_bt5mj")]
 visible = false
 position = Vector2(296, -478)
@@ -850,5 +956,18 @@ polygon = PackedVector2Array(-197, -843, -111, -762, -36, -727, -2, -676, 41, -6
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(-211, 501, -152, 400, -88, 431, -31, 450, 73, 468, 124, 510, 158, 535, 209, 557, 350, 655, 73, 780, -236, 671, -489, 620, -685, 553, -644, 405, -505, 438, -480, 453, -431, 488, -385, 516, -321, 528, -277, 532)
+
+[node name="input_boomBox_Off" parent="." instance=ExtResource("35_gxtfn")]
+visible = false
+
+[node name="cappy_sleeping" type="AnimatedSprite2D" parent="."]
+position = Vector2(799, -92)
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_yd4ix")
+autoplay = "default"
+
+[node name="input_couchR_sleep" parent="." instance=ExtResource("37_02fa5")]
+visible = false
+position = Vector2(0, 2)
 
 [connection signal="ready" from="." to="." method="_on_ready"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsufi3x4issvv"
+path="res://.godot/imported/Manu Chao - Me Gustas Tu (Instrumental).mp3-b5b58216f2d8d0e024c838576539b826.mp3str"
+
+[deps]
+
+source_file="res://audio/environment/Manu Chao - Me Gustas Tu (Instrumental).mp3"
+dest_files=["res://.godot/imported/Manu Chao - Me Gustas Tu (Instrumental).mp3-b5b58216f2d8d0e024c838576539b826.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

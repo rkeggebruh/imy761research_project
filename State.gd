@@ -21,14 +21,27 @@ var lampFillInLettersOffCorrect = false
 # ------------------------------- BOOMBOX -------------------------------
 
 var boomBoxFillInLettersTimeOn = false
-#var letterLampLCorrect = false
-#var letterLampACorrect = false
+var letterRadioACorrect = false
+var letterRadioDCorrect = false
+var radioOn = false
 var boomBoxFillInLettersOnCorrect = false
 
 var boomBoxFillInLettersTimeOff = false
-#var letterLampACorrectOff = false
-#var letterLampRCorrectOff = false
+var letterRadioLCorrectOff = false
+var letterRadioRCorrectOff = false
+var letterRadioOCorrectOff = false
 var boomBoxFillInLettersOffCorrect = false
+
+# ------------------------------- COUCH RIGHT -------------------------------
+
+var CRFillInLettersTimeSleep = false
+var letterCRCorrectL = false
+var letterCRCorrectO = false
+var sleepRight = false
+var CRFillInLettersTimeSleepCorrect = false
+
+var cappySleeping = false
+
 
 # ------------------------------- TV -------------------------------
 var inTV = false
@@ -53,3 +66,6 @@ var FillInTVLetterTimeTVOFF = false
 # ------------------------- CAPPY MOVEMENT -------------------------
 
 var is_in_dialog: bool = false
+
+var otterMoving = false
+var otterSpeed = 0.09

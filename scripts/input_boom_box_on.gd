@@ -15,32 +15,39 @@ func _ready():
 	line_edit2.focus_exited.connect(_on_line_edit2_focus_exited)
 
 func _process(_delta):
-	if !enterOnce && State.lampFillInLettersTimeOn:
+	if !enterOnce && State.boomBoxFillInLettersTimeOn:
 		$".".show()
 		State.is_in_dialog = true
 		enterOnce = true
 	
-	if State.letterLampLCorrect && State.letterLampACorrect:
-		State.lampFillInLettersOnCorrect = true
+	if State.letterRadioACorrect && State.letterRadioDCorrect:
+		State.boomBoxFillInLettersOnCorrect = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()
 		$Line2D2.hide()
 		$LineEdit.hide()
 		$LineEdit2.hide()
+		$instruction3.hide()
 		$instruction.hide()
 		$instruction2.hide()
 
 func _on_line_editText_entered(text: String) -> void:
-	if State.lampFillInLettersTimeOn && text == "l":
-		State.letterLampLCorrect = true
+	print("line for a, printed.. ", text)
+	if State.boomBoxFillInLettersTimeOn && text == "a":
+		State.letterRadioACorrect = true
 
 func _on_line_editText2_entered(text: String) -> void:
-	if State.lampFillInLettersTimeOn && text == "a":
-		State.letterLampACorrect = true
+	if State.boomBoxFillInLettersTimeOn && text == "d":
+		State.letterRadioDCorrect = true
 
 func _on_line_edit_focus_exited() -> void:
 	_on_line_editText_entered(line_edit.text)
 
 func _on_line_edit2_focus_exited() -> void:
 	_on_line_editText2_entered(line_edit2.text)
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$".".hide()
+	State.is_in_dialog = false

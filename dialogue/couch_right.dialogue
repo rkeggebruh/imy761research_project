@@ -1,0 +1,10 @@
+~ start
+set State.is_in_dialog = true
+
+if not State.cappySleeping:
+	Mari: To sleep - fill in the letters
+	set State.CRFillInLettersTimeSleep = true
+
+
+set State.is_in_dialog = false
+=> END

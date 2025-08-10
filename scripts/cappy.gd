@@ -7,6 +7,7 @@ const SPEED = 300.0
 func _getInput():
 	if State.is_in_dialog:
 		velocity = Vector2.ZERO
+		$AnimatedSprite2D.play("idle")
 	else:
 		var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 		velocity = direction * SPEED

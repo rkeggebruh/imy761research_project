@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://ck47jx85k345o"
+path="res://.godot/imported/couch_right.dialogue-f7185b3d69819714d1e68f68f18abfbc.tres"
+
+[deps]
+
+source_file="res://dialogue/couch_right.dialogue"
+dest_files=["res://.godot/imported/couch_right.dialogue-f7185b3d69819714d1e68f68f18abfbc.tres"]
+
+[params]
+
+defaults=true

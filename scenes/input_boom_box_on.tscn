@@ -65,6 +65,7 @@ offset_bottom = 542.5
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.403922)
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
 z_index = 2
@@ -141,6 +142,7 @@ width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="Excelente!" type="Sprite2D" parent="."]
+z_index = 2
 position = Vector2(-11, -24)
 scale = Vector2(0.0166666, 0.0166666)
 texture = ExtResource("4_a611i")
@@ -154,3 +156,5 @@ libraries = {
 position = Vector2(1, 0)
 scale = Vector2(0.495856, 0.495856)
 texture = ExtResource("4_ro5pl")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

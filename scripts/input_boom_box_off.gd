@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var line_edit: LineEdit = $LineEdit
 @onready var line_edit2: LineEdit = $LineEdit2
+@onready var line_edit3: LineEdit = $LineEdit3
+
 
 var enterOnce = false
 
@@ -10,18 +12,22 @@ func _ready():
 	$"Excelente!".hide()
 	
 	line_edit.text_submitted.connect(_on_line_editText_entered)
-	line_edit2.text_submitted.connect(_on_line_editText2_entered)
 	line_edit.focus_exited.connect(_on_line_edit_focus_exited)
+	
+	line_edit2.text_submitted.connect(_on_line_editText2_entered)
 	line_edit2.focus_exited.connect(_on_line_edit2_focus_exited)
+	
+	line_edit3.text_submitted.connect(_on_line_editText3_entered)
+	line_edit3.focus_exited.connect(_on_line_edit3_focus_exited)
 
 func _process(_delta):
-	if !enterOnce && State.lampFillInLettersTimeOn:
+	if !enterOnce && State.boomBoxFillInLettersTimeOff:
 		$".".show()
 		State.is_in_dialog = true
 		enterOnce = true
 	
-	if State.letterLampLCorrect && State.letterLampACorrect:
-		State.lampFillInLettersOnCorrect = true
+	if State.letterRadioLCorrectOff && State.letterRadioRCorrectOff && State.letterRadioOCorrectOff:
+		State.boomBoxFillInLettersOffCorrect = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()
@@ -29,18 +35,34 @@ func _process(_delta):
 		$LineEdit.hide()
 		$LineEdit2.hide()
 		$instruction.hide()
-		$instruction2.hide()
+		$instruction3.hide()
+		$LineEdit3.hide()
+		$Line2D3.hide()
 
 func _on_line_editText_entered(text: String) -> void:
-	if State.lampFillInLettersTimeOn && text == "l":
-		State.letterLampLCorrect = true
+	print("input for l, ", text)
+	if State.boomBoxFillInLettersTimeOff && text == "l":
+		State.letterRadioLCorrectOff = true
 
 func _on_line_editText2_entered(text: String) -> void:
-	if State.lampFillInLettersTimeOn && text == "a":
-		State.letterLampACorrect = true
+	print("input for r, ", text)
+	if State.boomBoxFillInLettersTimeOff && text == "r":
+		State.letterRadioRCorrectOff = true
+
+func _on_line_editText3_entered(text: String) -> void:
+	print("input for o, ", text)
+	if State.boomBoxFillInLettersTimeOff && text == "o":
+		State.letterRadioOCorrectOff = true
 
 func _on_line_edit_focus_exited() -> void:
 	_on_line_editText_entered(line_edit.text)
 
 func _on_line_edit2_focus_exited() -> void:
 	_on_line_editText2_entered(line_edit2.text)
+
+func _on_line_edit3_focus_exited() -> void:
+	_on_line_editText3_entered(line_edit3.text)
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	$".".hide()
+	State.is_in_dialog = false
