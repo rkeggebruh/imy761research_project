@@ -230,17 +230,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -537.5
-offset_top = -308.0
-offset_right = 537.5
-offset_bottom = 57.0
+offset_left = -696.0
+offset_top = -346.0
+offset_right = 696.0
+offset_bottom = 203.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.780173, 0.816827, 0.988927, 1)
 theme_override_fonts/font = ExtResource("1_eorod")
 theme_override_font_sizes/font_size = 60
-text = "The goal is to learn all the vocab words 
-and when you are ready (know the words)
+text = "There are a few interactable objects, 
+you will know this cause you will see their outlines.
+Press 'e' to interact with them. You will get two chances
+to fill in the blanks to learn the word and then
  to buy something - speak
  to Mrs Otter to buy your furniture :)"
 horizontal_alignment = 1
@@ -255,9 +257,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -425.0
-offset_top = 23.0
+offset_top = 158.0
 offset_right = 425.0
-offset_bottom = 278.0
+offset_bottom = 413.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.694541, 0.92261, 0.938919, 1)
@@ -270,26 +272,26 @@ metadata/_edit_use_anchors_ = true
 
 [node name="flowerOne" type="AnimatedSprite2D" parent="."]
 z_index = 12
-position = Vector2(-213.939, 327)
+position = Vector2(-213.939, 438)
 rotation = -0.00116821
 sprite_frames = SubResource("SpriteFrames_qisn3")
 autoplay = "default"
 speed_scale = 0.6
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-68.9387, 317)
+position = Vector2(-68.9387, 428)
 sprite_frames = SubResource("SpriteFrames_jnqop")
 autoplay = "default"
 speed_scale = 0.7
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(225.061, 325)
+position = Vector2(225.061, 436)
 sprite_frames = SubResource("SpriteFrames_f18mc")
 autoplay = "default"
 speed_scale = 0.8
 
 [node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
-position = Vector2(77.0613, 328)
+position = Vector2(77.0613, 439)
 sprite_frames = SubResource("SpriteFrames_j6h0m")
 autoplay = "default"
 

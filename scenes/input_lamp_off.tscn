@@ -155,13 +155,13 @@ max_length = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction" type="Label" parent="."]
-offset_left = -126.0
+offset_left = -200.0
 offset_top = -386.0
-offset_right = 37.0
+offset_right = 25.0
 offset_bottom = -312.0
 theme_override_fonts/font = ExtResource("3_vqeju")
 theme_override_font_sizes/font_size = 50
-text = "L   mpa"
+text = "La L   mpa"
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction2" type="Label" parent="."]

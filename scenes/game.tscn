@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=87 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -41,6 +41,8 @@
 [ext_resource type="PackedScene" uid="uid://dsjtc3oov25ei" path="res://scenes/input_couch_r_sleep.tscn" id="37_02fa5"]
 [ext_resource type="PackedScene" uid="uid://dqoj51uvmihih" path="res://scenes/game_instructions.tscn" id="39_7025r"]
 [ext_resource type="PackedScene" uid="uid://cm47qhdhg7cag" path="res://scenes/input_perchero_1.tscn" id="40_m4url"]
+[ext_resource type="PackedScene" uid="uid://c0a7scddivvpu" path="res://scenes/input_couch_off.tscn" id="42_pr1ej"]
+[ext_resource type="PackedScene" uid="uid://vkrog2apl17d" path="res://scenes/input_perchero_off.tscn" id="43_05nbr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("3_264po")
@@ -984,6 +986,12 @@ z_index = 500
 position = Vector2(-908, -357)
 
 [node name="input_perchero1" parent="." instance=ExtResource("40_m4url")]
+visible = false
+
+[node name="input_couch_off" parent="." instance=ExtResource("42_pr1ej")]
+visible = false
+
+[node name="input_perchero_off" parent="." instance=ExtResource("43_05nbr")]
 visible = false
 
 [connection signal="ready" from="." to="." method="_on_ready"]

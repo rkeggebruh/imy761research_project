@@ -8,6 +8,14 @@ var fade_time := 0.0
 #Check - going to need to change this code a bit so that the lamp can only be switched on
 # off after they have filled in the letters correctly
 func _process(delta):
+	if State.lampFillInLettersTimeOn:
+		$"Lámpara".hide()
+	
+	if State.lampFillInLettersTimeOff:
+		$"Lámpara".hide()
+	#else:
+		#$"Lámpara".show()
+	
 	if inLampArea && State.lampFillInLettersOnCorrect:
 		#if State.lampCanBeSwitchedOn:
 		$on.show()

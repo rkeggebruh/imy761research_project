@@ -21,6 +21,7 @@ func _process(_delta):
 		enterOnce = true
 	
 	if State.letterLampLCorrect && State.letterLampACorrect:
+		State.lampFillInLettersTimeOn = false
 		State.lampFillInLettersOnCorrect = true
 		$"Excelente!".show()
 		$AnimationPlayerlampOn.play("anim")

@@ -69,9 +69,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
 z_index = 2
-offset_left = -121.0
+offset_left = -64.0
 offset_top = -260.0
-offset_right = 27.0
+offset_right = 84.0
 offset_bottom = -178.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -85,9 +85,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit2" type="LineEdit" parent="."]
 z_index = 3
-offset_left = 24.0
+offset_left = 35.0
 offset_top = -260.0
-offset_right = 172.0
+offset_right = 183.0
 offset_bottom = -178.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -106,7 +106,7 @@ offset_right = -65.0
 offset_bottom = -186.0
 theme_override_fonts/font = ExtResource("3_sduo8")
 theme_override_font_sizes/font_size = 50
-text = "L"
+text = "El"
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction3" type="Label" parent="."]
@@ -116,27 +116,27 @@ offset_right = 221.0
 offset_bottom = -186.0
 theme_override_fonts/font = ExtResource("3_sduo8")
 theme_override_font_sizes/font_size = 50
-text = "io"
+text = "o"
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction2" type="Label" parent="."]
-offset_left = -35.0
+offset_left = -83.0
 offset_top = -260.0
-offset_right = 104.0
+offset_right = 56.0
 offset_bottom = -186.0
 theme_override_fonts/font = ExtResource("3_sduo8")
 theme_override_font_sizes/font_size = 50
-text = "ra"
+text = "c  ad"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="."]
-position = Vector2(23, -199)
+position = Vector2(43, -199)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="Line2D2" type="Line2D" parent="."]
-position = Vector2(-115, -199)
+position = Vector2(-56, -199)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)

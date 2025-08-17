@@ -28,6 +28,7 @@ func _process(_delta):
 	
 	if State.letterNTVCorrect && State.letterETVCorrect:
 		State.TVFillInLettersCorrect = true
+		State.FillInTVLetterTime = false
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()
@@ -44,7 +45,7 @@ func _process(_delta):
 func _on_line_editText_entered(text: String) -> void:
 	label.text  = "Answer: " + text
 	
-	if State.FillInTVLetterTime && text == "e":
+	if State.FillInTVLetterTime && text == "a":
 		label.text = "Correcto! " + text
 		State.letterETVCorrect = true
 
@@ -52,7 +53,7 @@ func _on_line_editText_entered(text: String) -> void:
 func _on_line_editText2_entered(text: String) -> void:
 	label2.text  = "Answer: " + text
 	
-	if State.FillInTVLetterTime && text == "n":
+	if State.FillInTVLetterTime && text == "s":
 		label2.text = "Excelente! " + text
 		State.letterNTVCorrect = true
 		State.FillInTVLetterTime = false

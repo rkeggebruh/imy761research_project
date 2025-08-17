@@ -23,6 +23,7 @@ func _process(_delta):
 	
 	if State.letterLampACorrectOff && State.letterLampRCorrectOff:
 		State.lampFillInLettersOffCorrect = true
+		State.lampFillInLettersTimeOff = false
 		State.twiceLamp = true
 		$"Excelente!".show()
 		$AnimationPlayerlampoff.play("anim")

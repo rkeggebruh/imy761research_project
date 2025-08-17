@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://buwjwsqua0f16" path="res://scripts/lamp.gd" id="1_f2tjl"]
 [ext_resource type="Texture2D" uid="uid://bk68j4lsmikno" path="res://assets/furniture/lampon.png" id="2_f2tjl"]
 [ext_resource type="Texture2D" uid="uid://dcyb4utgu85s5" path="res://assets/furniture/lampOff.png" id="3_wd4c3"]
-[ext_resource type="Texture2D" uid="uid://djji0jxhwj867" path="res://assets/textLabels/Lámpara.png" id="5_wd4c3"]
+[ext_resource type="Texture2D" uid="uid://cdpd0x6puhwbo" path="res://assets/textLabels/La Lámpara.png" id="5_f3gd7"]
 [ext_resource type="AudioStream" uid="uid://b84ajquwk6n1d" path="res://audio/vocabAudio/lampara.mp3" id="6_f3gd7"]
 
 [sub_resource type="Animation" id="Animation_f3gd7"]
@@ -44,10 +44,10 @@ tracks/0/path = NodePath("Lámpara:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.0333333, 0.6),
+"times": PackedFloat32Array(0.0333333, 0.566667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(1, 1), Vector2(2.45283, 2.45283)]
+"values": [Vector2(0.133281, 0.133281), Vector2(0.536634, 0.536634)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -56,15 +56,15 @@ tracks/1/path = NodePath("Lámpara:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.6),
+"times": PackedFloat32Array(0.0333333, 0.566667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-8, -465), Vector2(-8, -613)]
+"values": [Vector2(1, -332), Vector2(39, -597)]
 }
 
 [sub_resource type="Animation" id="Animation_q4m2g"]
 resource_name = "fadeOut"
-length = 1.5
+length = 0.6
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -72,10 +72,10 @@ tracks/0/path = NodePath("Lámpara:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 0.566667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(2.45283, 2.45283), Vector2(1, 1)]
+"values": [Vector2(0.536634, 0.536634), Vector2(0.133281, 0.133281)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -84,10 +84,10 @@ tracks/1/path = NodePath("Lámpara:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.5),
+"times": PackedFloat32Array(0, 0.566667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-8, -613), Vector2(-8, -465)]
+"values": [Vector2(39, -597), Vector2(1, -332)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f3gd7"]
@@ -130,7 +130,7 @@ libraries = {
 [node name="Lámpara" type="Sprite2D" parent="."]
 modulate = Color(0.924029, 0.978865, 0.973182, 1)
 position = Vector2(-8, -566)
-texture = ExtResource("5_wd4c3")
+texture = ExtResource("5_f3gd7")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_f3gd7")

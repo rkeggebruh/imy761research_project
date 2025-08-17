@@ -28,6 +28,7 @@ func _process(_delta):
 	
 	if State.letterRadioLCorrectOff && State.letterRadioRCorrectOff && State.letterRadioOCorrectOff:
 		State.boomBoxFillInLettersOffCorrect = true
+		State.boomBoxFillInLettersTimeOff = false
 		State.twiceRadio = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
@@ -41,13 +42,13 @@ func _process(_delta):
 		$Line2D3.hide()
 
 func _on_line_editText_entered(text: String) -> void:
-	print("input for l, ", text)
-	if State.boomBoxFillInLettersTimeOff && text == "l":
+	print("input for e, ", text)
+	if State.boomBoxFillInLettersTimeOff && text == "e":
 		State.letterRadioLCorrectOff = true
 
 func _on_line_editText2_entered(text: String) -> void:
-	print("input for r, ", text)
-	if State.boomBoxFillInLettersTimeOff && text == "r":
+	print("input for c, ", text)
+	if State.boomBoxFillInLettersTimeOff && text == "c":
 		State.letterRadioRCorrectOff = true
 
 func _on_line_editText3_entered(text: String) -> void:

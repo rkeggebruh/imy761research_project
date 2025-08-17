@@ -2,17 +2,17 @@
 set State.is_in_dialog = true
 
 if State.twiceRadio:
-	Mari: Cappy, you have mastered the spelling of la radio.
+	Mari: Cappy, you have mastered the spelling of the table.
 	Mari: perhaps you should buy it?
 	set State.is_in_dialog = false
 else:
 	if State.radioOn == true:
-		Mari: To turn off the radio, I need you to fill in the missing letters for me...
+		Mari: Do you want to learn what a painting is?
+		Cappy: Si
+		Mari: I need you to fill in the missing letters for me...
 		set State.boomBoxFillInLettersTimeOff = true
 	else:
-		Mari: Ah Cappy, do you want to listen to the radio?
-		Cappy: Si, I would love to listen
-		Mari: Alrighty then, I need you to fill in the missing letters for me...
+		Mari: Ah Cappy, more practice, you know what to do!
 		set State.boomBoxFillInLettersTimeOn = true
 
 #if State.TVFillInLettersCorrect:

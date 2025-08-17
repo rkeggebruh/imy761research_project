@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://5g2qdhad3qwc"]
+[gd_scene load_steps=20 format=3 uid="uid://5g2qdhad3qwc"]
 
 [ext_resource type="Script" uid="uid://duh1fp7b2n58y" path="res://scripts/input_tv_off_t_l_i.gd" id="1_dpy3v"]
 [ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="1_hcswj"]
 [ext_resource type="Texture2D" uid="uid://be7huobu125e6" path="res://assets/furniture/TV_OUTLINE_New.png" id="2_dpy3v"]
 [ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="3_jg71k"]
 [ext_resource type="Texture2D" uid="uid://xchr4j2gmdf2" path="res://assets/environment/lavender_blow.png" id="4_ouo0m"]
+[ext_resource type="Texture2D" uid="uid://5nbh5aruu7y6" path="res://assets/furniture/la mesa-aazrqbiqa.png" id="6_jg71k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yt5sx"]
 font = ExtResource("1_hcswj")
@@ -116,6 +117,7 @@ color = Color(0, 0, 0, 0.584314)
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="."]
+visible = false
 offset_left = -117.0
 offset_top = -156.0
 offset_right = 80.0
@@ -124,6 +126,7 @@ label_settings = SubResource("LabelSettings_yt5sx")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
+visible = false
 offset_left = -117.0
 offset_top = -56.0
 offset_right = 80.0
@@ -133,9 +136,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="."]
 z_index = 2
-offset_left = -134.0
+offset_left = -197.0
 offset_top = -276.0
-offset_right = 14.0
+offset_right = -49.0
 offset_bottom = -194.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
@@ -164,13 +167,13 @@ max_length = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction" type="Label" parent="."]
-offset_left = -82.0
+offset_left = -145.0
 offset_top = -276.0
-offset_right = -21.0
+offset_right = -84.0
 offset_bottom = -202.0
 theme_override_fonts/font = ExtResource("1_hcswj")
 theme_override_font_sizes/font_size = 50
-text = "e"
+text = "a"
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction2" type="Label" parent="."]
@@ -180,7 +183,7 @@ offset_right = 73.0
 offset_bottom = -202.0
 theme_override_fonts/font = ExtResource("1_hcswj")
 theme_override_font_sizes/font_size = 50
-text = "vis  ón"
+text = "es"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -206,7 +209,7 @@ max_length = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D3" type="Line2D" parent="."]
-position = Vector2(-121, -215)
+position = Vector2(-184, -215)
 points = PackedVector2Array(30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
@@ -218,6 +221,7 @@ width = 5.0
 default_color = Color(0.504511, 0.920221, 1, 1)
 
 [node name="TvOutlineNew" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(-9, 71)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_dpy3v")
@@ -241,5 +245,9 @@ autoplay = "default"
 position = Vector2(306, 151)
 sprite_frames = SubResource("SpriteFrames_x8au3")
 autoplay = "default"
+
+[node name="LaMesa-aazrqbiqa" type="Sprite2D" parent="."]
+position = Vector2(0, 52)
+texture = ExtResource("6_jg71k")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

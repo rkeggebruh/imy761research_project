@@ -153,13 +153,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_jc4vj")
 max_length = 1
 
 [node name="instruction" type="Label" parent="."]
-offset_left = -70.0
+offset_left = -192.0
 offset_top = -386.0
-offset_right = 19.0
+offset_right = 16.0
 offset_bottom = -312.0
 theme_override_fonts/font = ExtResource("3_2sx5j")
 theme_override_font_sizes/font_size = 50
-text = "amp"
+text = "La    amp"
 
 [node name="instruction2" type="Label" parent="."]
 offset_left = 72.0

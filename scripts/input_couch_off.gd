@@ -15,18 +15,19 @@ func _ready():
 	line_edit2.focus_exited.connect(_on_line_edit2_focus_exited)
 
 func _process(_delta):
-	if !enterOnce && State.coatRackFillInLettersTimeOn:
+	if !enterOnce && State.CRFillInLettersTimeSleepTwo:
 		$".".show()
 		State.is_in_dialog = true
 		enterOnce = true
 	
-	if State.lettercoatRackPCorrect && State.lettercoatRackRCorrect:
-		State.coatRackFillInLettersTimeOn = false
-		State.coatRackFillInLettersOnCorrect = true
+	if State.letterCRCorrectLTwo && State.letterCRCorrectfTwo:
+		State.CRFillInLettersTimeSleepCorrectTwo = true
+		State.CRFillInLettersTimeSleepTwo = false
+		State.cappySleeping = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
-		$Line2D.hide()
 		$Line2D2.hide()
+		$Line2D3.hide()
 		$LineEdit.hide()
 		$LineEdit2.hide()
 		$instruction3.hide()
@@ -34,19 +35,18 @@ func _process(_delta):
 
 func _on_line_editText_entered(text: String) -> void:
 	print("line for a, printed.. ", text)
-	if State.coatRackFillInLettersTimeOn && text == "p":
-		State.lettercoatRackPCorrect = true
+	if State.CRFillInLettersTimeSleepTwo && text == "l":
+		State.letterCRCorrectLTwo = true
 
 func _on_line_editText2_entered(text: String) -> void:
-	if State.coatRackFillInLettersTimeOn && text == "r":
-		State.lettercoatRackRCorrect = true
+	if State.CRFillInLettersTimeSleepTwo && text == "f":
+		State.letterCRCorrectfTwo = true
 
 func _on_line_edit_focus_exited() -> void:
 	_on_line_editText_entered(line_edit.text)
 
 func _on_line_edit2_focus_exited() -> void:
 	_on_line_editText2_entered(line_edit2.text)
-
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	$".".hide()

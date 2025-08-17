@@ -9,6 +9,11 @@ var enterOnce = false
 
 func _process(delta):
 	
+	if State.FillInTVLetterTime:
+		$"Televisión".hide()
+	if State.FillInTVLetterTimeTVOFF:
+		$"Televisión".hide()
+	
 	if isInTvArea && State.TVFillInLettersCorrect:
 		$tvAnimatedSprite.play('on')
 		tvOn = true
@@ -26,7 +31,8 @@ func _on_tv_area_area_entered(area: Area2D) -> void:
 		$AnimationPlayer.play("tvShow")
 		$AudioStreamPlayer2D.play()
 		isInTvArea = true
-		$outline.show()
+		#$outline.show()
+		$LaMesa_outline.show()
 
 
 func _on_tv_area_area_exited(area: Area2D) -> void:
@@ -34,8 +40,10 @@ func _on_tv_area_area_exited(area: Area2D) -> void:
 		$AnimationPlayer.play("tvHide")
 		isInTvArea = false
 		$outline.hide()
+		$LaMesa_outline.hide()
 
 func _on_ready() -> void:
 	$"Televisión".hide()
 	$outline.hide()
+	$LaMesa_outline.hide()
 	

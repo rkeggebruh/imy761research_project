@@ -22,6 +22,7 @@ func _process(_delta):
 	
 	if State.letterCRCorrectL && State.letterCRCorrectO:
 		State.CRFillInLettersTimeSleepCorrect = true
+		State.CRFillInLettersTimeSleep = false
 		State.cappySleeping = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")

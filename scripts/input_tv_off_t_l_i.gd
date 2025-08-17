@@ -32,6 +32,7 @@ func _process(_delta):
 	if State.letterLTVCorrectOff && State.letterTTVCorrectOff && State.letterITVCorrectOff:
 		print("------------------ TV LETTERS OFF CORRECT")
 		State.TVFillInLettersCorrectOff = true
+		State.FillInTVLetterTimeTVOFF = false
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()
@@ -51,7 +52,7 @@ func _on_line_editText_entered(text: String) -> void:
 	label.text  = "Answer: " + text
 	print("t input: ", text)
 	
-	if State.FillInTVLetterTimeTVOFF && text == "t":
+	if State.FillInTVLetterTimeTVOFF && text == "l":
 		label.text = "Correcto! " + text
 		print("------------------ T LETTERS OFF CORRECT")
 		State.letterTTVCorrectOff = true
@@ -61,7 +62,7 @@ func _on_line_editText2_entered(text: String) -> void:
 	label2.text  = "Answer: " + text
 	print("l input: ", text)
 	
-	if State.FillInTVLetterTimeTVOFF && text == "l":
+	if State.FillInTVLetterTimeTVOFF && text == "m":
 		label2.text = "Excelente! " + text
 		print("------------------ L LETTERS OFF CORRECT")
 		State.letterLTVCorrectOff = true
@@ -70,7 +71,7 @@ func _on_line_editText3_entered(text: String) -> void:
 	label2.text  = "Answer: " + text
 	print("i input: ", text)
 	
-	if State.FillInTVLetterTimeTVOFF && text == "i":
+	if State.FillInTVLetterTimeTVOFF && text == "a":
 		label2.text = "Excelente! " + text
 		print("------------------ I LETTERS OFF CORRECT")
 		State.letterITVCorrectOff = true

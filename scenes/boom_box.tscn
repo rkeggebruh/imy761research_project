@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1d0jgm407loh"]
+[gd_scene load_steps=12 format=3 uid="uid://d1d0jgm407loh"]
 
 [ext_resource type="Script" uid="uid://ciu6e8clker" path="res://scripts/boom_box.gd" id="1_6i3w5"]
 [ext_resource type="Texture2D" uid="uid://bg00arjojgous" path="res://assets/furniture/boomBoxOutline.png" id="2_jbcuw"]
 [ext_resource type="Texture2D" uid="uid://dqjgioclflfyt" path="res://assets/furniture/boomBox.png" id="3_m65dv"]
 [ext_resource type="AudioStream" uid="uid://b6nahdqy4ssyn" path="res://audio/vocabAudio/laRadio.mp3" id="4_jbcuw"]
-[ext_resource type="Texture2D" uid="uid://c0stthpvw6j5i" path="res://assets/textLabels/La Radio.png" id="5_m65dv"]
+[ext_resource type="Texture2D" uid="uid://40hlghkvx5ec" path="res://assets/textLabels/El Cuadro.png" id="5_tdb8i"]
+[ext_resource type="Texture2D" uid="uid://df1am4iqwel7n" path="res://assets/furniture/easel_Outline.png" id="6_6jbuu"]
+[ext_resource type="Texture2D" uid="uid://bacey2nc3hwcd" path="res://assets/furniture/easel_state4.png" id="7_l1yww"]
 
 [sub_resource type="Animation" id="Animation_vgl3b"]
 length = 0.001
@@ -101,20 +103,22 @@ y_sort_enabled = true
 script = ExtResource("1_6i3w5")
 
 [node name="outline" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_jbcuw")
 
 [node name="boombox" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("3_m65dv")
 
 [node name="boomboxArea" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="boomboxArea"]
-polygon = PackedVector2Array(-123, -278, -194, -143, -286, -93, -324, -62, -341, 11, -263, 62, 283, 63, 352, -8, 274, -138, 201, -128, 140, -277)
+polygon = PackedVector2Array(-123, -278, -194, -143, -192, 351, 206, 333, 208, 21, 201, -128, 140, -277)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-237, -46, -287, -13, -288, 22, 293, 25, 296, -44, 214, -45)
+polygon = PackedVector2Array(-124, -32, -121, 72, -148, 182, 183, 182, 150, 8, 153, -37)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_jbcuw")
@@ -123,12 +127,20 @@ volume_db = 10.0
 [node name="LaRadio" type="Sprite2D" parent="."]
 z_index = -1
 position = Vector2(57, -403)
-texture = ExtResource("5_m65dv")
+texture = ExtResource("5_tdb8i")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_6jbuu")
 }
+
+[node name="EaselOutline" type="Sprite2D" parent="."]
+position = Vector2(17.5, 23.5)
+texture = ExtResource("6_6jbuu")
+
+[node name="EaselState4" type="Sprite2D" parent="."]
+position = Vector2(17.5, 25.5)
+texture = ExtResource("7_l1yww")
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="boomboxArea" to="." method="_on_boombox_area_area_entered"]

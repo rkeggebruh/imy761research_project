@@ -1,15 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://cm47qhdhg7cag"]
+[gd_scene load_steps=10 format=3 uid="uid://vkrog2apl17d"]
 
-[ext_resource type="Script" uid="uid://dy3jf12nuy28y" path="res://scripts/input_perchero_1.gd" id="1_i5ka8"]
-[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="2_u2it5"]
-[ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="3_iht38"]
-[ext_resource type="Texture2D" uid="uid://cahqyy43tlbi3" path="res://assets/furniture/hook.png" id="4_i5ka8"]
+[ext_resource type="Script" uid="uid://dmaqhs6w1gox5" path="res://scripts/input_perchero_off.gd" id="1_elw8a"]
+[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="2_8eqys"]
+[ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="3_a7vda"]
+[ext_resource type="Texture2D" uid="uid://cahqyy43tlbi3" path="res://assets/furniture/hook.png" id="4_1gphd"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyb8o"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_giqvm"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_color = Color(0.8, 0.8, 0.8, 0)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_230l0"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mkdy"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="Animation" id="Animation_db1xo"]
@@ -49,8 +49,8 @@ _data = {
 &"anim": SubResource("Animation_2f4ux")
 }
 
-[node name="input_perchero1" type="Node2D"]
-script = ExtResource("1_i5ka8")
+[node name="input_perchero_off" type="Node2D"]
+script = ExtResource("1_elw8a")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 8
@@ -76,10 +76,10 @@ offset_bottom = -178.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
-theme_override_fonts/font = ExtResource("2_u2it5")
+theme_override_fonts/font = ExtResource("2_8eqys")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_nyb8o")
-theme_override_styles/normal = SubResource("StyleBoxFlat_230l0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_giqvm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mkdy")
 max_length = 1
 metadata/_edit_use_anchors_ = true
 
@@ -92,21 +92,21 @@ offset_bottom = -178.0
 theme_override_colors/clear_button_color_pressed = Color(0, 0, 0, 0)
 theme_override_colors/clear_button_color = Color(0, 0, 0, 0)
 theme_override_colors/font_color = Color(0.482226, 0.741199, 0.984076, 1)
-theme_override_fonts/font = ExtResource("2_u2it5")
+theme_override_fonts/font = ExtResource("2_8eqys")
 theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxFlat_nyb8o")
-theme_override_styles/normal = SubResource("StyleBoxFlat_230l0")
+theme_override_styles/focus = SubResource("StyleBoxFlat_giqvm")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mkdy")
 max_length = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction" type="Label" parent="."]
-offset_left = -195.0
+offset_left = -249.0
 offset_top = -260.0
-offset_right = 26.0
+offset_right = 27.0
 offset_bottom = -186.0
-theme_override_fonts/font = ExtResource("2_u2it5")
+theme_override_fonts/font = ExtResource("2_8eqys")
 theme_override_font_sizes/font_size = 50
-text = "El    erche"
+text = "El   p   rcher"
 metadata/_edit_use_anchors_ = true
 
 [node name="instruction3" type="Label" parent="."]
@@ -114,9 +114,10 @@ offset_left = 71.0
 offset_top = -260.0
 offset_right = 210.0
 offset_bottom = -186.0
-theme_override_fonts/font = ExtResource("2_u2it5")
+theme_override_fonts/font = ExtResource("2_8eqys")
 theme_override_font_sizes/font_size = 50
-text = "o"
+text = "
+"
 metadata/_edit_use_anchors_ = true
 
 [node name="Line2D" type="Line2D" parent="."]
@@ -135,7 +136,7 @@ default_color = Color(0.504511, 0.920221, 1, 1)
 z_index = 2
 position = Vector2(-11, -24)
 scale = Vector2(0.0166666, 0.0166666)
-texture = ExtResource("3_iht38")
+texture = ExtResource("3_a7vda")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -145,6 +146,6 @@ libraries = {
 [node name="Hook" type="Sprite2D" parent="."]
 position = Vector2(2, 62)
 scale = Vector2(0.618852, 0.618853)
-texture = ExtResource("4_i5ka8")
+texture = ExtResource("4_1gphd")
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

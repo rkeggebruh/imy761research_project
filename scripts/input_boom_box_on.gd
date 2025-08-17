@@ -21,6 +21,7 @@ func _process(_delta):
 		enterOnce = true
 	
 	if State.letterRadioACorrect && State.letterRadioDCorrect:
+		State.boomBoxFillInLettersTimeOn = false
 		State.boomBoxFillInLettersOnCorrect = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
@@ -34,11 +35,11 @@ func _process(_delta):
 
 func _on_line_editText_entered(text: String) -> void:
 	print("line for a, printed.. ", text)
-	if State.boomBoxFillInLettersTimeOn && text == "a":
+	if State.boomBoxFillInLettersTimeOn && text == "u":
 		State.letterRadioACorrect = true
 
 func _on_line_editText2_entered(text: String) -> void:
-	if State.boomBoxFillInLettersTimeOn && text == "d":
+	if State.boomBoxFillInLettersTimeOn && text == "r":
 		State.letterRadioDCorrect = true
 
 func _on_line_edit_focus_exited() -> void:

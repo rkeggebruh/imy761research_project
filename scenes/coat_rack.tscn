@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://gxpkav534kq6" path="res://scripts/coat_rack.gd" id="1_itcit"]
 [ext_resource type="Texture2D" uid="uid://01ppyqqojjgh" path="res://assets/furniture/hookOutline-Photoroom.png" id="2_7232u"]
 [ext_resource type="Texture2D" uid="uid://cahqyy43tlbi3" path="res://assets/furniture/hook.png" id="2_f2ocr"]
-[ext_resource type="Texture2D" uid="uid://g7aluj0ue6s4" path="res://assets/textLabels/Perchero.png" id="2_hc3ly"]
+[ext_resource type="Texture2D" uid="uid://bkecx31ag8hfe" path="res://assets/textLabels/El Perchero.png" id="2_hc3ly"]
 [ext_resource type="AudioStream" uid="uid://bxk0o6sxlgat" path="res://audio/vocabAudio/Perchero.mp3" id="5_hc3ly"]
 
 [sub_resource type="Animation" id="Animation_uns7v"]
@@ -42,10 +42,10 @@ tracks/0/path = NodePath("Perchero:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.933333),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.136819, 0.103846), Vector2(0.501668, 0.380769)]
+"values": [Vector2(0.136819, 0.103846), Vector2(0.449547, 0.341209)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -54,10 +54,10 @@ tracks/1/path = NodePath("Perchero:position")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.933333),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(548, 575), Vector2(549, 641.5)]
+"values": [Vector2(548, 575), Vector2(548.857, 683)]
 }
 
 [sub_resource type="Animation" id="Animation_hc3ly"]
@@ -72,7 +72,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.966667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0.501668, 0.380769), Vector2(0.136819, 0.103846)]
+"values": [Vector2(0.449547, 0.341209), Vector2(0.136819, 0.103846)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -84,7 +84,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0, 0.966667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(549, 641.5), Vector2(548, 575)]
+"values": [Vector2(548.857, 683), Vector2(548, 575)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8oi6j"]

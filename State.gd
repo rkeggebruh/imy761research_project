@@ -40,6 +40,10 @@ var lettercoatRackPCorrect = false
 var lettercoatRackRCorrect = false
 var coatRackFillInLettersOnCorrect = false
 
+var coatRackFillInLettersTimeOff = false
+var lettercoatRackECorrectOff = false
+var lettercoatRackOCorrectOff = false
+var coatRackFillInLettersOffCorrect = false
 
 # ------------------------------- COUCH RIGHT -------------------------------
 
@@ -48,6 +52,12 @@ var letterCRCorrectL = false
 var letterCRCorrectO = false
 var sleepRight = false
 var CRFillInLettersTimeSleepCorrect = false
+
+
+var CRFillInLettersTimeSleepTwo = false
+var letterCRCorrectLTwo = false
+var letterCRCorrectfTwo = false
+var CRFillInLettersTimeSleepCorrectTwo = false
 
 var cappySleeping = false
 
@@ -87,3 +97,5 @@ var hideInstructions = false
 var twiceRadio = false
 var twiceLamp = false
 var twiceTv = false
+var twiceCoatRack = false
+var twiceCouch = false
