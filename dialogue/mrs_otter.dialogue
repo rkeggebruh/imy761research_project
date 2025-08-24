@@ -1,11 +1,68 @@
 ~ start
 set State.is_in_dialog = true
-Cappy: [[Hi|Hello|Howdy]], this is some dialogue.
-Mrs Otter: Here are some choices.
+Cappy: [[Hi|Hello|Howdy]]!
+
 set State.is_in_dialog = false
 
-#Mrs Otter: this is for after you have completed learning all the words
-
-Mrs Otter: Well done Cappy, what would you like to purchase then?
-Cappy:
-=> END
+if !(State.twiceRadio and State.twiceLamp and State.twiceTv and State.twiceCoatRack and State.twiceCouch):
+	Mrs Otter: Hmm, not so fast Cappy. You still need to practice a few more items before you can buy something.
+	
+	Cappy: Oh okay, I’ll go back and finish those first!
+	=> END
+else:
+	Mrs Otter: Well done Cappy, you completed everything! What would you like to purchase then?
+	- Lamp
+		Mrs Otter: Great choice! What is 'lamp' in Spanish?
+		- la Mesa
+			Mrs Otter: Correct! You bought the lamp. ✨
+			set State.lampPurchased = true
+		- el Sofá
+			Mrs Otter: Nope, that’s not it. Try again later!
+			=> END
+		- la Lámpara
+			Mrs Otter: That’s the couch, not the lamp!
+			=> END
+	- Painting
+		Mrs Otter: Great choice! What is 'Painting' in Spanish?
+		- el Cuadro
+			Mrs Otter: Correct! You bought the Painting. 🎨 
+			set State.paintingPurchased = true
+		- la Lámpara
+			Mrs Otter: Nope, that’s the Painting.
+			=> END
+		- la Mesa
+			Mrs Otter: no, try again
+			=> END
+	- Table
+		Mrs Otter: Great choice! What is 'Table' in Spanish?
+		- la Mesa
+			Mrs Otter: Correct! You bought the table.
+			set State.tablePurchased = true
+		- el Cuadro
+			Mrs Otter: Nope, that’s not quite right.
+			=> END
+		- el Sofá
+			Mrs Otter: Try again.
+			=> END
+	- Coat Rack
+		Mrs Otter: Great choice! What is 'coat rack' in Spanish?
+		- el Perchero
+			Mrs Otter: Correct! You bought the coat rack. 🧥
+			set State.coatrackPurchased = true
+		- el Cuadro
+			Mrs Otter: Nope, that’s not it.
+			=> END
+		- la Mesa
+			Mrs Otter: So close, but not quite.
+		=> END
+	- Couch
+		Mrs Otter: Great choice! What is 'couch' in Spanish?
+		- el Sofá
+			Mrs Otter: Correct! You bought the couch. 🛋️
+			set State.couchPurchased = true
+		- la Lámpara
+			Mrs Otter: Nope, that’s the TV.
+			=> END
+		- el Cuadro
+			Mrs Otter: That’s the lamp.
+			=> END

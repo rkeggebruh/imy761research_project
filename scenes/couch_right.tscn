@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://pmqhmk878ped"]
+[gd_scene load_steps=10 format=3 uid="uid://pmqhmk878ped"]
 
 [ext_resource type="Script" uid="uid://bbf5jsyvj6vgj" path="res://scripts/couch_right.gd" id="1_cf84c"]
 [ext_resource type="Texture2D" uid="uid://brd6m0213kydv" path="res://assets/furniture/couchRightOutline.png" id="1_dpjej"]
 [ext_resource type="Texture2D" uid="uid://crgn0t6hdlwrf" path="res://assets/furniture/couch_side_r_nice.png" id="2_cf84c"]
 [ext_resource type="Texture2D" uid="uid://pwnv4weckd8p" path="res://assets/textLabels/El Sofá.png" id="4_q21tc"]
+[ext_resource type="AudioStream" uid="uid://dbmnvu6qrskjg" path="res://audio/vocabAudio/elSofa.mp3" id="5_o7tpj"]
 
 [sub_resource type="Animation" id="Animation_7o22e"]
 length = 0.001
@@ -117,7 +118,7 @@ polygon = PackedVector2Array(23, -386, -39, -324, -264, -287, -269, 197, -209, 3
 
 [node name="ElSofá" type="Sprite2D" parent="."]
 self_modulate = Color(1, 0.337255, 0.431373, 1)
-z_index = -1
+z_index = 6
 position = Vector2(493, 5)
 scale = Vector2(0.47551, 0.47551)
 texture = ExtResource("4_q21tc")
@@ -126,6 +127,10 @@ texture = ExtResource("4_q21tc")
 libraries = {
 &"": SubResource("AnimationLibrary_ajvcp")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_o7tpj")
+volume_db = 10.0
 
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="couchRightArea" to="." method="_on_couch_right_area_area_entered"]

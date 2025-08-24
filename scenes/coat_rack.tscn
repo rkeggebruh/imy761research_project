@@ -100,7 +100,7 @@ script = ExtResource("1_itcit")
 
 [node name="Perchero" type="Sprite2D" parent="."]
 self_modulate = Color(1, 1, 0.352941, 1)
-z_index = -1
+z_index = 6
 position = Vector2(549, 641.5)
 scale = Vector2(0.501668, 0.380769)
 texture = ExtResource("2_hc3ly")

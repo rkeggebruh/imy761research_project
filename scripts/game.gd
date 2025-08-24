@@ -4,6 +4,10 @@ extends Node2D
 var enterOnce = false
 var enterOnceCouch = false
 
+var enterOnceSecondIns = false
+
+var second = false
+
 func _on_ready() -> void:
 	$cappy_sleeping.hide()
 
@@ -45,14 +49,14 @@ func _process(_delta):
 	if (State.boomBoxFillInLettersOnCorrect && !enterOnce):
 		enterOnce = true
 		State.radioOn = true
-		$mainGameSoundtrack.stop()
-		$radioOn.play()
+		#$mainGameSoundtrack.stop()
+		#$radioOn.play()
 	
 	if (State.boomBoxFillInLettersOffCorrect && enterOnce):
 		enterOnce = false
 		State.radioOn = false
-		$mainGameSoundtrack.play()
-		$radioOn.stop()
+		#$mainGameSoundtrack.play()
+		#$radioOn.stop()
 	
 	if (State.CRFillInLettersTimeSleepCorrect && !enterOnceCouch):
 		enterOnceCouch = true
@@ -70,7 +74,21 @@ func _process(_delta):
 		State.cappySleeping = false
 		$environmental_objects/Cappy.show()
 	
-	if State.instructionsShowing && Input.is_action_just_released("ui_accept"):
+	#if State.instructionsShowing && !enterOnceSecondIns && Input.is_action_just_released("ui_accept"):
+		#print("show second instructions")
+		#State.showSecondInstruction = true
+		#enterOnceSecondIns = true
+	#
+	#if State.showSecondInstruction && State.instructionsShowing && Input.is_action_just_released("ui_accept"):
+		#print("hiiiiiiiiiiide instructions")
+		#State.instructionsShowing = false
+		#State.hideInstructions = true
+	
+	if State.instructionsShowing && !enterOnceSecondIns && Input.is_action_just_released("ui_accept"):
+		print("show second instructions")
+		State.showSecondInstruction = true
+		enterOnceSecondIns = true
+	elif State.showSecondInstruction && State.instructionsShowing && Input.is_action_just_released("ui_accept"):
 		print("hiiiiiiiiiiide instructions")
 		State.instructionsShowing = false
 		State.hideInstructions = true

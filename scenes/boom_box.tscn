@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://ciu6e8clker" path="res://scripts/boom_box.gd" id="1_6i3w5"]
 [ext_resource type="Texture2D" uid="uid://bg00arjojgous" path="res://assets/furniture/boomBoxOutline.png" id="2_jbcuw"]
 [ext_resource type="Texture2D" uid="uid://dqjgioclflfyt" path="res://assets/furniture/boomBox.png" id="3_m65dv"]
-[ext_resource type="AudioStream" uid="uid://b6nahdqy4ssyn" path="res://audio/vocabAudio/laRadio.mp3" id="4_jbcuw"]
+[ext_resource type="AudioStream" uid="uid://d2kw1nfqaktgt" path="res://audio/vocabAudio/El cuadro.mp3" id="4_tdb8i"]
 [ext_resource type="Texture2D" uid="uid://40hlghkvx5ec" path="res://assets/textLabels/El Cuadro.png" id="5_tdb8i"]
 [ext_resource type="Texture2D" uid="uid://df1am4iqwel7n" path="res://assets/furniture/easel_Outline.png" id="6_6jbuu"]
 [ext_resource type="Texture2D" uid="uid://bacey2nc3hwcd" path="res://assets/furniture/easel_state4.png" id="7_l1yww"]
@@ -121,11 +121,11 @@ polygon = PackedVector2Array(-123, -278, -194, -143, -192, 351, 206, 333, 208, 2
 polygon = PackedVector2Array(-124, -32, -121, 72, -148, 182, 183, 182, 150, 8, 153, -37)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_jbcuw")
+stream = ExtResource("4_tdb8i")
 volume_db = 10.0
 
 [node name="LaRadio" type="Sprite2D" parent="."]
-z_index = -1
+z_index = 6
 position = Vector2(57, -403)
 texture = ExtResource("5_tdb8i")
 

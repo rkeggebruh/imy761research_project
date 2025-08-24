@@ -5,9 +5,9 @@
 [ext_resource type="Texture2D" uid="uid://bg8as8nbdyxmt" path="res://assets/furniture/TV_OFF_New.PNG" id="3_co5w5"]
 [ext_resource type="Texture2D" uid="uid://lmnp5vhloni8" path="res://assets/furniture/TV_ON_NEW.png" id="4_46idq"]
 [ext_resource type="PackedScene" uid="uid://dyics0kkgnyn2" path="res://helpers/actionable.tscn" id="6_46idq"]
+[ext_resource type="AudioStream" uid="uid://dwm2u1gjb6d2r" path="res://audio/vocabAudio/La mesa.mp3" id="7_4knv4"]
 [ext_resource type="Resource" uid="uid://da7o6yuv151bt" path="res://dialogue/tv.dialogue" id="7_pbv82"]
 [ext_resource type="Texture2D" uid="uid://dckxk8lel7uoj" path="res://assets/textLabels/La Mesa (1).png" id="8_4knv4"]
-[ext_resource type="AudioStream" uid="uid://cusu8si372aam" path="res://audio/vocabAudio/tv.mp3" id="8_pbv82"]
 [ext_resource type="Texture2D" uid="uid://bq80taqqhy8gh" path="res://assets/furniture/la mesa.png" id="9_4knv4"]
 [ext_resource type="Texture2D" uid="uid://5nbh5aruu7y6" path="res://assets/furniture/la mesa-aazrqbiqa.png" id="10_daor5"]
 
@@ -182,11 +182,12 @@ position = Vector2(6, -72)
 shape = SubResource("RectangleShape2D_46idq")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("8_pbv82")
+stream = ExtResource("7_4knv4")
 volume_db = 10.0
 
 [node name="Televisión" type="Sprite2D" parent="."]
 modulate = Color(1.34766e-06, 0.710467, 0.59251, 1)
+z_index = 6
 position = Vector2(-18, -14)
 scale = Vector2(0.461722, 0.461722)
 texture = ExtResource("8_4knv4")
@@ -209,3 +210,4 @@ texture = ExtResource("10_daor5")
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="tv_area" to="." method="_on_tv_area_area_entered"]
 [connection signal="area_exited" from="tv_area" to="." method="_on_tv_area_area_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

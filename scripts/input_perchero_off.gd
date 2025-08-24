@@ -23,6 +23,7 @@ func _process(_delta):
 	if State.lettercoatRackECorrectOff && State.lettercoatRackOCorrectOff:
 		State.coatRackFillInLettersTimeOff = false
 		State.coatRackFillInLettersOffCorrect = true
+		State.twiceCoatRack = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()

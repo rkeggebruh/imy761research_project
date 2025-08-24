@@ -91,6 +91,8 @@ var otterSpeed = 0.09
 
 var instructionsShowing = true
 var hideInstructions = false
+var showSecond = false
+var showSecondInstruction = false
 
 # ------------------------ INPUT CONTROLS -----------------------------
 
@@ -99,3 +101,9 @@ var twiceLamp = false
 var twiceTv = false
 var twiceCoatRack = false
 var twiceCouch = false
+
+var paintingPurchased = true
+var lampPurchased = true
+var couchPurchased = true
+var tablePurchased = true
+var coatRackPurchased = true

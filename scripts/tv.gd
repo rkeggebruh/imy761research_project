@@ -37,6 +37,7 @@ func _on_tv_area_area_entered(area: Area2D) -> void:
 
 func _on_tv_area_area_exited(area: Area2D) -> void:
 	if(area.name == "cappy"):
+		#$"Televisión".hide()
 		$AnimationPlayer.play("tvHide")
 		isInTvArea = false
 		$outline.hide()
@@ -47,3 +48,8 @@ func _on_ready() -> void:
 	$outline.hide()
 	$LaMesa_outline.hide()
 	
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if anim_name == "tvHide":
+		$"Televisión".hide()

@@ -24,6 +24,7 @@ func _process(_delta):
 		State.CRFillInLettersTimeSleepCorrectTwo = true
 		State.CRFillInLettersTimeSleepTwo = false
 		State.cappySleeping = true
+		State.twiceCouch = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D2.hide()

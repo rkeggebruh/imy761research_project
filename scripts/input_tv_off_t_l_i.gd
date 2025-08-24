@@ -33,6 +33,7 @@ func _process(_delta):
 		print("------------------ TV LETTERS OFF CORRECT")
 		State.TVFillInLettersCorrectOff = true
 		State.FillInTVLetterTimeTVOFF = false
+		State.twiceTv = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()

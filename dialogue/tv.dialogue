@@ -1,15 +1,20 @@
 ~ start
 set State.is_in_dialog = true
 
-if State.tvOn == true:
-	Mari: Another shot at the table, I need you to fill in the missing letters for me...
-	set State.FillInTVLetterTimeTVOFF = true
+if State.twiceTv:
+	Mari: Cappy, you know all about the [wave]Lampara[/wave].
+	Mari: Me thinks its buy time
+	set State.is_in_dialog = false
 else:
-	set State.is_in_dialog = true
-	Mari: Ah Cappy, do you want to learn how to say table?
-	Cappy: Si, I would love to learn the table
-	Mari: Alrighty then, I need you to fill in the missing letters for me...
-	set State.FillInTVLetterTime = true
+	if State.tvOn == true:
+		Mari: Another shot at the table, I need you to fill in the missing letters for me...
+		set State.FillInTVLetterTimeTVOFF = true
+	else:
+		set State.is_in_dialog = true
+		Mari: Ah Cappy, do you want to learn how to say table?
+		Cappy: Si, I would love to learn the table
+		Mari: Alrighty then, I need you to fill in the missing letters for me...
+		set State.FillInTVLetterTime = true
 
 #if State.TVFillInLettersCorrect:
 #	Mari: yay, go Cappy

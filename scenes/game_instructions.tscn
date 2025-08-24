@@ -230,23 +230,45 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -696.0
-offset_top = -346.0
-offset_right = 696.0
-offset_bottom = 203.0
+offset_left = -690.0
+offset_top = -380.0
+offset_right = 702.0
+offset_bottom = 169.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_color = Color(0.780173, 0.816827, 0.988927, 1)
 theme_override_fonts/font = ExtResource("1_eorod")
 theme_override_font_sizes/font_size = 60
-text = "There are a few interactable objects, 
-you will know this cause you will see their outlines.
-Press 'e' to interact with them. You will get two chances
-to fill in the blanks to learn the word and then
- to buy something - speak
- to Mrs Otter to buy your furniture :)"
+text = "Cappy has just moved into a brand-new house! The rooms are empty, and to make it feel like home, Cappy needs to shop for furniture. But there’s a twist—Mrs. Otter, the shopkeeper, only sells furniture to those who know the words in Spanish."
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -681.0
+offset_top = -796.0
+offset_right = 711.0
+offset_bottom = 673.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.780173, 0.816827, 0.988927, 1)
+theme_override_fonts/font = ExtResource("1_eorod")
+theme_override_font_sizes/font_size = 43
+text = "How to Play:
+- Look for objects with glowing outlines—these are the furniture pieces you can interact with.
+- Press E to examine them.
+- You’ll get two chances to fill in the blanks and learn the Spanish word for that object.
+- Once you’ve learned the word, go speak to Mrs. Otter. She’ll let you buy the furniture and add it to your new home.
+Goal: Help Cappy furnish the house by learning the names of everyday items—knowledge unlocks comfort!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="."]
@@ -265,7 +287,7 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0.694541, 0.92261, 0.938919, 1)
 theme_override_fonts/font = ExtResource("1_eorod")
 theme_override_font_sizes/font_size = 60
-text = "Press 'e' to continue to the game!"
+text = "Press 'e' to continue!"
 horizontal_alignment = 1
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true

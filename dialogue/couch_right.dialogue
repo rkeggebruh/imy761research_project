@@ -1,13 +1,18 @@
 ~ start
 set State.is_in_dialog = true
 
-if State.CRFillInLettersTimeSleepCorrect:
-	Mari: Another nap?
-	Mari: fill in the letters then...
-	set State.CRFillInLettersTimeSleepTwo = true
-if not State.cappySleeping:
-	Mari: To sleep - fill in the letters
-	set State.CRFillInLettersTimeSleep = true
+if State.twiceCouch:
+	Mari: Cappy, you know all about the [wave]Couch[/wave].
+	Mari: Me thinks its buy time
+	set State.is_in_dialog = false
+else:
+	if State.CRFillInLettersTimeSleepCorrect:
+		Mari: Another nap?
+		Mari: fill in the letters then...
+		set State.CRFillInLettersTimeSleepTwo = true
+	if not State.cappySleeping:
+		Mari: To sleep - fill in the letters
+		set State.CRFillInLettersTimeSleep = true
 
 
 set State.is_in_dialog = false

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwm2u1gjb6d2r"
+path="res://.godot/imported/La mesa.mp3-81a29edc4be5d0694066c51a3c4bcc0a.mp3str"
+
+[deps]
+
+source_file="res://audio/vocabAudio/La mesa.mp3"
+dest_files=["res://.godot/imported/La mesa.mp3-81a29edc4be5d0694066c51a3c4bcc0a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -2,7 +2,7 @@
 set State.is_in_dialog = true
 
 if State.twiceRadio:
-	Mari: Cappy, you have mastered the spelling of the table.
+	Mari: Cappy, you have mastered the spelling of the Painting.
 	Mari: perhaps you should buy it?
 	set State.is_in_dialog = false
 else:

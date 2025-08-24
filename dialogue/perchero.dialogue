@@ -1,12 +1,17 @@
 ~ start
 set State.is_in_dialog = true
 
-if State.coatRackFillInLettersOnCorrect:
-	Mari: Another take at the coat rack?
-	set State.coatRackFillInLettersTimeOff = true
+if State.twiceCoatRack:
+	Mari: Cappy, you know all about the [wave]coat rack[/wave].
+	Mari: Me thinks its buy time
+	set State.is_in_dialog = false
 else:
-	Mari: Ah, the coat rack, or as its better known as..
-	set State.coatRackFillInLettersTimeOn = true
+	if State.coatRackFillInLettersOnCorrect:
+		Mari: Another take at the coat rack?
+		set State.coatRackFillInLettersTimeOff = true
+	else:
+		Mari: Ah, the coat rack, or as its better known as..
+		set State.coatRackFillInLettersTimeOn = true
 
 
 => END
