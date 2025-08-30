@@ -17,6 +17,9 @@ func _ready():
 	$tableCount2.hide()
 	$paintingCount2.hide()
 	$coatRackCount2.hide()
+	$benchCount.hide()
+	$benchLine.hide()
+	$benchCount2.hide()
 
 
 func _process(_delta):
@@ -30,6 +33,8 @@ func _process(_delta):
 		$tableCount.show()
 	if State.boomBoxFillInLettersOnCorrect:
 		$paintingCount.show()
+	if State.BenchFillInLettersTimeOnCorrect:
+		$benchCount.show()
 	
 	
 	if State.twiceCoatRack:
@@ -47,3 +52,6 @@ func _process(_delta):
 	if State.twiceRadio:
 		$paintingLine.show()
 		$paintingCount2.show()
+	if State.twiceBench:
+		$benchCount2.show()
+		$benchLine.show()

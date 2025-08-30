@@ -62,6 +62,19 @@ var CRFillInLettersTimeSleepCorrectTwo = false
 var cappySleeping = false
 
 
+# ------------------------------- BENCH -------------------------------
+
+var BenchFillInLettersTimeOn = false
+var letterBenchCorrectEOn = false
+var letterBenchCorrectCOn = false
+var BenchFillInLettersTimeOnCorrect = false
+
+var BenchFillInLettersTimeOff = false
+var letterBenchCorrectBOff = false
+var letterBenchCorrectOOff = false
+var BenchFillInLettersTimeOffCorrect = false
+
+
 # ------------------------------- TV -------------------------------
 var inTV = false
 var TVFirstInteraction = false
@@ -101,6 +114,7 @@ var twiceLamp = false
 var twiceTv = false
 var twiceCoatRack = false
 var twiceCouch = false
+var twiceBench = false
 
 var paintingPurchased = true
 var lampPurchased = true

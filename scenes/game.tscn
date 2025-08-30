@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=93 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -37,6 +37,7 @@
 [ext_resource type="AudioStream" uid="uid://dsufi3x4issvv" path="res://audio/environment/Manu Chao - Me Gustas Tu (Instrumental).mp3" id="26_wljb1"]
 [ext_resource type="Texture2D" uid="uid://bga6wdxx0w2xm" path="res://assets/environment/otter_house.png" id="28_sgl2t"]
 [ext_resource type="PackedScene" uid="uid://cnojbajjaa4on" path="res://scenes/banco.tscn" id="29_458eo"]
+[ext_resource type="Resource" uid="uid://cnh1718obfgcn" path="res://dialogue/bench.dialogue" id="30_fedci"]
 [ext_resource type="PackedScene" uid="uid://lih3tuu2gbvf" path="res://scenes/input_boom_box_on.tscn" id="30_js0lu"]
 [ext_resource type="PackedScene" uid="uid://cp3q0sk8a4vk1" path="res://scenes/input_boom_box_off.tscn" id="35_gxtfn"]
 [ext_resource type="Texture2D" uid="uid://ddpslvv7n12y" path="res://assets/furniture/capySleepR.png" id="36_twgab"]
@@ -46,6 +47,8 @@
 [ext_resource type="PackedScene" uid="uid://c0a7scddivvpu" path="res://scenes/input_couch_off.tscn" id="42_pr1ej"]
 [ext_resource type="PackedScene" uid="uid://vkrog2apl17d" path="res://scenes/input_perchero_off.tscn" id="43_05nbr"]
 [ext_resource type="PackedScene" uid="uid://bng6ypx7jg3l7" path="res://scenes/game_finished.tscn" id="45_oaba0"]
+[ext_resource type="PackedScene" uid="uid://7uswkac8kaq6" path="res://scenes/bench_input_on.tscn" id="47_h3rex"]
+[ext_resource type="PackedScene" uid="uid://pk5hfshsocup" path="res://scenes/bench_input_off.tscn" id="49_8qswn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e1j6l"]
 texture = ExtResource("3_264po")
@@ -806,6 +809,12 @@ texture = ExtResource("21_sgl2t")
 position = Vector2(-637, -210)
 scale = Vector2(0.55, 0.55)
 
+[node name="Actionable" parent="environmental_objects/Banco" instance=ExtResource("4_p57ef")]
+dialogue_resource = ExtResource("30_fedci")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="environmental_objects/Banco/Actionable"]
+polygon = PackedVector2Array(160, -9.09091, 136.364, 20, 141.818, 150.909, 123.636, 205.455, 125.454, 261.818, 698.182, 270.909, 710.909, 187.273, 672.727, 138.182, 669.091, -14.5454, 623.636, -20, 612.727, -7.27271)
+
 [node name="mainGameSoundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0tnpc")
 autoplay = true
@@ -1007,5 +1016,10 @@ visible = false
 
 [node name="gameFinished" parent="." instance=ExtResource("45_oaba0")]
 z_index = 4096
+
+[node name="bench_input_on" parent="." instance=ExtResource("47_h3rex")]
+visible = false
+
+[node name="bench_input_off" parent="." instance=ExtResource("49_8qswn")]
 
 [connection signal="ready" from="." to="." method="_on_ready"]

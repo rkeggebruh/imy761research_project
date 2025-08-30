@@ -77,6 +77,7 @@ set State.twiceLamp = true
 set State.twiceTv = true
 set State.twiceCoatRack = true
 set State.twiceCouch = true
+set State.twiceBench = true
 
 set State.is_in_dialog = false
 
@@ -115,12 +116,12 @@ else:
 	~ Painting
 	# Painting
 	Mrs Otter: Next, what is 'painting' in Spanish?
+	- el Banco
+		Mrs Otter: Nope, that’s the bench.
+		=> Painting
 	- el Cuadro
 		Mrs Otter: Correct! You bought the painting. 🎨
 		set State.paintingPurchased = true
-	- la Lámpara
-		Mrs Otter: Nope, that’s the lamp.
-		=> Painting
 	- la Mesa
 		Mrs Otter: Nope, that’s the table.
 		=> Painting
@@ -141,15 +142,29 @@ else:
 	# Coat Rack
 	~ CoatRack
 	Mrs Otter: How about 'coat rack' in Spanish?
-	- el Perchero
-		Mrs Otter: Correct! You bought the coat rack. 🧥
-		set State.coatrackPurchased = true
 	- el Cuadro
 		Mrs Otter: Nope, that’s the painting.
 		=> CoatRack
 	- la Mesa
 		Mrs Otter: Nope, that’s the table.
 		=> CoatRack
+	- el Perchero
+		Mrs Otter: Correct! You bought the coat rack. 🧥
+		set State.coatrackPurchased = true
+
+	# Bench
+	~ Bench
+	Mrs Otter: How about 'bench' in Spanish?
+	- el Cuadro
+		Mrs Otter: Nope, that’s the painting. Try again!
+		=> Bench
+	- el Banco
+		Mrs Otter: Correct! You bought the bench. 🪑
+		set State.benchPurchased = true
+	- la Mesa
+		Mrs Otter: Nope, that’s the table. Try again!
+		=> Bench
+
 
 	# Couch
 	~ Couch

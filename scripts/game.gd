@@ -49,6 +49,12 @@ func _process(_delta):
 	$input_perchero_off.position.x = $environmental_objects/Cappy.position.x
 	$input_perchero_off.position.y = $environmental_objects/Cappy.position.y
 	
+	$bench_input_on.position.x = $environmental_objects/Cappy.position.x
+	$bench_input_on.position.y = $environmental_objects/Cappy.position.y
+	
+	$bench_input_off.position.x = $environmental_objects/Cappy.position.x
+	$bench_input_off.position.y = $environmental_objects/Cappy.position.y
+	
 	
 	if (State.boomBoxFillInLettersOnCorrect && !enterOnce):
 		enterOnce = true
