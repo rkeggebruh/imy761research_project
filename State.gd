@@ -107,3 +107,6 @@ var lampPurchased = true
 var couchPurchased = true
 var tablePurchased = true
 var coatRackPurchased = true
+
+
+var gameFinished = false

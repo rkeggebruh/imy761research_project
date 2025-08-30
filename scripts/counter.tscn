@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://f6seudg5helj" path="res://assets/environment/flowers2.png" id="4_mdy6d"]
 
 [node name="counter" type="Node2D"]
-z_index = 4096
+z_index = 3000
 script = ExtResource("1_8dvr0")
 
 [node name="ColorRect" type="ColorRect" parent="."]

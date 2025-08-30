@@ -1,68 +1,169 @@
+#~ start
+#set State.is_in_dialog = true
+#Cappy: [[Hi|Hello|Howdy]]!
+#
+#set State.is_in_dialog = false
+#
+#if !(State.twiceRadio and State.twiceLamp and State.twiceTv and State.twiceCoatRack and State.twiceCouch):
+#	Mrs Otter: Hmm, not so fast Cappy. You are not quite done learning yet.
+#	
+#	Cappy: Oh okay, I’ll go back and finish those first!
+#	=> END
+#else:
+#	Mrs Otter: Well done Cappy, you completed everything! What would you like to purchase then?
+#	- Lamp
+#		Mrs Otter: Great choice! What is 'lamp' in Spanish?
+#		- la Mesa
+#			Mrs Otter: Correct! You bought the lamp. ✨
+#			set State.lampPurchased = true
+#		- el Sofá
+#			Mrs Otter: Nope, that’s not it. Try again later!
+#			=> END
+#		- la Lámpara
+#			Mrs Otter: That’s the couch, not the lamp!
+#			=> END
+#	- Painting
+#		Mrs Otter: Great choice! What is 'Painting' in Spanish?
+#		- el Cuadro
+#			Mrs Otter: Correct! You bought the Painting. 🎨 
+#			set State.paintingPurchased = true
+#		- la Lámpara
+#			Mrs Otter: Nope, that’s the Painting.
+#			=> END
+#		- la Mesa
+#			Mrs Otter: no, try again
+#			=> END
+#	- Table
+#		Mrs Otter: Great choice! What is 'Table' in Spanish?
+#		- la Mesa
+#			Mrs Otter: Correct! You bought the table.
+#			set State.tablePurchased = true
+#		- el Cuadro
+#			Mrs Otter: Nope, that’s not quite right.
+#			=> END
+#		- el Sofá
+#			Mrs Otter: Try again.
+#			=> END
+#	- Coat Rack
+#		Mrs Otter: Great choice! What is 'coat rack' in Spanish?
+#		- el Perchero
+#			Mrs Otter: Correct! You bought the coat rack. 🧥
+#			set State.coatrackPurchased = true
+#		- el Cuadro
+#			Mrs Otter: Nope, that’s not it.
+#			=> END
+#		- la Mesa
+#			Mrs Otter: So close, but not quite.
+#		=> END
+#	- Couch
+#		Mrs Otter: Great choice! What is 'couch' in Spanish?
+#		- el Sofá
+#			Mrs Otter: Correct! You bought the couch. 🛋️
+#			set State.couchPurchased = true
+#		- la Lámpara
+#			Mrs Otter: Nope, that’s the TV.
+#			=> END
+#		- el Cuadro
+#			Mrs Otter: That’s the lamp.
+#			=> END
+
+
 ~ start
 set State.is_in_dialog = true
 Cappy: [[Hi|Hello|Howdy]]!
+
+set State.twiceRadio = true
+set State.twiceLamp = true
+set State.twiceTv = true
+set State.twiceCoatRack = true
+set State.twiceCouch = true
 
 set State.is_in_dialog = false
 
 if !(State.twiceRadio and State.twiceLamp and State.twiceTv and State.twiceCoatRack and State.twiceCouch):
 	Mrs Otter: Hmm, not so fast Cappy. You are not quite done learning yet.
-	
 	Cappy: Oh okay, I’ll go back and finish those first!
 	=> END
 else:
-	Mrs Otter: Well done Cappy, you completed everything! What would you like to purchase then?
-	- Lamp
-		Mrs Otter: Great choice! What is 'lamp' in Spanish?
-		- la Mesa
-			Mrs Otter: Correct! You bought the lamp. ✨
-			set State.lampPurchased = true
-		- el Sofá
-			Mrs Otter: Nope, that’s not it. Try again later!
-			=> END
-		- la Lámpara
-			Mrs Otter: That’s the couch, not the lamp!
-			=> END
-	- Painting
-		Mrs Otter: Great choice! What is 'Painting' in Spanish?
-		- el Cuadro
-			Mrs Otter: Correct! You bought the Painting. 🎨 
-			set State.paintingPurchased = true
-		- la Lámpara
-			Mrs Otter: Nope, that’s the Painting.
-			=> END
-		- la Mesa
-			Mrs Otter: no, try again
-			=> END
-	- Table
-		Mrs Otter: Great choice! What is 'Table' in Spanish?
-		- la Mesa
-			Mrs Otter: Correct! You bought the table.
-			set State.tablePurchased = true
-		- el Cuadro
-			Mrs Otter: Nope, that’s not quite right.
-			=> END
-		- el Sofá
-			Mrs Otter: Try again.
-			=> END
-	- Coat Rack
-		Mrs Otter: Great choice! What is 'coat rack' in Spanish?
-		- el Perchero
-			Mrs Otter: Correct! You bought the coat rack. 🧥
-			set State.coatrackPurchased = true
-		- el Cuadro
-			Mrs Otter: Nope, that’s not it.
-			=> END
-		- la Mesa
-			Mrs Otter: So close, but not quite.
-		=> END
-	- Couch
-		Mrs Otter: Great choice! What is 'couch' in Spanish?
-		- el Sofá
-			Mrs Otter: Correct! You bought the couch. 🛋️
-			set State.couchPurchased = true
-		- la Lámpara
-			Mrs Otter: Nope, that’s the TV.
-			=> END
-		- el Cuadro
-			Mrs Otter: That’s the lamp.
-			=> END
+	Mrs Otter: Well done Cappy, you completed everything! Let’s buy your furniture together.
+
+	# Lamp
+#	Mrs Otter: First, what is 'lamp' in Spanish?
+#	- la Mesa
+#		Mrs Otter: Nope, that’s the table.
+#		=> END
+#	- el Sofá
+#		Mrs Otter: Nope, that’s the couch.
+#		=> END
+#	- la Lámpara
+#		Mrs Otter: Correct! You bought the lamp. ✨
+#		set State.lampPurchased = true
+
+	# Lamp
+	~ LampQuestion
+	Mrs Otter: First, what is 'lamp' in Spanish?
+	- la Mesa
+		Mrs Otter: Nope, that’s the table. Try again!
+		=> LampQuestion
+	- el Sofá
+		Mrs Otter: Nope, that’s the couch. Try again!
+		=> LampQuestion
+	- la Lámpara
+		Mrs Otter: Correct! You bought the lamp. ✨
+		set State.lampPurchased = true
+
+	~ Painting
+	# Painting
+	Mrs Otter: Next, what is 'painting' in Spanish?
+	- el Cuadro
+		Mrs Otter: Correct! You bought the painting. 🎨
+		set State.paintingPurchased = true
+	- la Lámpara
+		Mrs Otter: Nope, that’s the lamp.
+		=> Painting
+	- la Mesa
+		Mrs Otter: Nope, that’s the table.
+		=> Painting
+
+	# Table
+	~ Table
+	Mrs Otter: Now, what is 'table' in Spanish?
+	- la Mesa
+		Mrs Otter: Correct! You bought the table. 🍽️
+		set State.tablePurchased = true
+	- el Cuadro
+		Mrs Otter: Nope, that’s the painting.
+		=> Table
+	- el Sofá
+		Mrs Otter: Nope, that’s the couch.
+		=> Table
+
+	# Coat Rack
+	~ CoatRack
+	Mrs Otter: How about 'coat rack' in Spanish?
+	- el Perchero
+		Mrs Otter: Correct! You bought the coat rack. 🧥
+		set State.coatrackPurchased = true
+	- el Cuadro
+		Mrs Otter: Nope, that’s the painting.
+		=> CoatRack
+	- la Mesa
+		Mrs Otter: Nope, that’s the table.
+		=> CoatRack
+
+	# Couch
+	~ Couch
+	Mrs Otter: Finally, what is 'couch' in Spanish?
+	- el Sofá
+		Mrs Otter: Correct! You bought the couch. 🛋️
+		set State.couchPurchased = true
+	- la Lámpara
+		Mrs Otter: Nope, that’s the lamp.
+		=> Couch
+	- el Cuadro
+		Mrs Otter: Nope, that’s the painting.
+		=> Couch
+
+	Mrs Otter: Well done Cappy, you now own all your furniture!
+	set State.gameFinished = true
+	=> END

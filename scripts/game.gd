@@ -10,8 +10,12 @@ var second = false
 
 func _on_ready() -> void:
 	$cappy_sleeping.hide()
+	$gameFinished.hide()
 
 func _process(_delta):
+	if State.gameFinished:
+		$gameFinished.show()
+	
 	$inputTV.position.x = $environmental_objects/Cappy.position.x
 	$inputTV.position.y = $environmental_objects/Cappy.position.y
 	
