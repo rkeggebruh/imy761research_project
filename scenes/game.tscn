@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://cn0ck7vxgkujf"]
+[gd_scene load_steps=88 format=3 uid="uid://cn0ck7vxgkujf"]
 
 [ext_resource type="Script" uid="uid://cy82vatl48d5a" path="res://scripts/game.gd" id="1_ir15t"]
 [ext_resource type="PackedScene" uid="uid://chrdxaqwo4jua" path="res://scenes/cappy.tscn" id="1_uwrxv"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://baqkmtjgd6wjr" path="res://scenes/mrs_otter.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bhlrguma5dtsr" path="res://scenes/tree_one.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://dyics0kkgnyn2" path="res://helpers/actionable.tscn" id="4_p57ef"]
+[ext_resource type="PackedScene" uid="uid://be8ojmfpv03cf" path="res://scripts/counter.tscn" id="5_0sl42"]
 [ext_resource type="Script" uid="uid://d2i8y1mcl01fp" path="res://scripts/otter_path.gd" id="5_twgab"]
 [ext_resource type="Resource" uid="uid://duhnmvhilx116" path="res://dialogue/mrs_otter.dialogue" id="5_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://ctvntps3t1rwp" path="res://scenes/tv.tscn" id="7_vtaks"]
@@ -443,6 +444,10 @@ position = Vector2(-3.99999, 4.00002)
 scale = Vector2(0.4, 0.4)
 
 [node name="Camera2D" type="Camera2D" parent="environmental_objects/Cappy"]
+
+[node name="counter" parent="environmental_objects/Cappy" instance=ExtResource("5_0sl42")]
+position = Vector2(1877.5, -1257.5)
+scale = Vector2(0.5, 0.5)
 
 [node name="Path2D" type="Path2D" parent="environmental_objects"]
 position = Vector2(424, 249)

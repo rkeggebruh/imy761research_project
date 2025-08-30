@@ -1,0 +1,298 @@
+[gd_scene load_steps=5 format=3 uid="uid://be8ojmfpv03cf"]
+
+[ext_resource type="Script" uid="uid://g7m3p1pj6xpk" path="res://scripts/counter.gd" id="1_8dvr0"]
+[ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="2_7vqgl"]
+[ext_resource type="Texture2D" uid="uid://c0yarlovu8ye2" path="res://assets/environment/flower2.PNG" id="3_xs8ro"]
+[ext_resource type="Texture2D" uid="uid://f6seudg5helj" path="res://assets/environment/flowers2.png" id="4_mdy6d"]
+
+[node name="counter" type="Node2D"]
+z_index = 4096
+script = ExtResource("1_8dvr0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -13.0
+offset_top = -23.0
+offset_right = 978.0
+offset_bottom = 1023.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 957.0
+offset_bottom = 999.0
+color = Color(0.197937, 0.197937, 0.197937, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="title" type="Label" parent="."]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 35.0
+offset_right = 848.0
+offset_bottom = 211.0
+theme_override_colors/font_color = Color(0.237664, 0.571899, 0.744427, 1)
+theme_override_colors/font_outline_color = Color(0.239216, 0.572549, 0.745098, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "Your counters :)"
+metadata/_edit_use_anchors_ = true
+
+[node name="lamp" type="Label" parent="."]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 193.0
+offset_right = 327.0
+offset_bottom = 369.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.576471, 0.811765, 0.94902, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "Lamp"
+metadata/_edit_use_anchors_ = true
+
+[node name="couch" type="Label" parent="."]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 344.0
+offset_right = 358.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "Couch"
+metadata/_edit_use_anchors_ = true
+
+[node name="table" type="Label" parent="."]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 489.0
+offset_right = 338.0
+offset_bottom = 665.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "Table"
+metadata/_edit_use_anchors_ = true
+
+[node name="painting" type="Label" parent="."]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 620.0
+offset_right = 444.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "Painting"
+metadata/_edit_use_anchors_ = true
+
+[node name="coatRack" type="Label" parent="."]
+texture_filter = 1
+offset_left = 72.0
+offset_top = 773.0
+offset_right = 542.0
+offset_bottom = 949.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "Coat rack"
+metadata/_edit_use_anchors_ = true
+
+[node name="lampCount" type="Label" parent="."]
+texture_filter = 1
+offset_left = 663.0
+offset_top = 193.0
+offset_right = 701.0
+offset_bottom = 369.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="couchCount" type="Label" parent="."]
+texture_filter = 1
+offset_left = 663.0
+offset_top = 344.0
+offset_right = 695.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="tableCount" type="Label" parent="."]
+texture_filter = 1
+offset_left = 663.0
+offset_top = 489.0
+offset_right = 701.0
+offset_bottom = 665.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="paintingCount" type="Label" parent="."]
+texture_filter = 1
+offset_left = 657.0
+offset_top = 620.0
+offset_right = 691.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="coatRackCount" type="Label" parent="."]
+texture_filter = 1
+offset_left = 663.0
+offset_top = 773.0
+offset_right = 711.0
+offset_bottom = 949.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="lampCount2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 739.0
+offset_top = 193.0
+offset_right = 777.0
+offset_bottom = 369.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="couchCount2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 739.0
+offset_top = 344.0
+offset_right = 771.0
+offset_bottom = 520.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="tableCount2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 739.0
+offset_top = 489.0
+offset_right = 777.0
+offset_bottom = 665.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="paintingCount2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 733.0
+offset_top = 620.0
+offset_right = 767.0
+offset_bottom = 796.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="coatRackCount2" type="Label" parent="."]
+texture_filter = 1
+offset_left = 739.0
+offset_top = 773.0
+offset_right = 787.0
+offset_bottom = 949.0
+theme_override_colors/font_color = Color(0.580444, 0.815384, 0.952199, 1)
+theme_override_colors/font_outline_color = Color(0.580392, 0.815686, 0.952941, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("2_7vqgl")
+theme_override_font_sizes/font_size = 120
+text = "|"
+metadata/_edit_use_anchors_ = true
+
+[node name="coatRackLine" type="ColorRect" parent="."]
+offset_left = 53.0
+offset_top = 849.0
+offset_right = 853.0
+offset_bottom = 856.0
+color = Color(0.580392, 0.815686, 0.952941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="tableLine" type="ColorRect" parent="."]
+offset_left = 58.0
+offset_top = 566.0
+offset_right = 858.0
+offset_bottom = 573.0
+color = Color(0.580392, 0.815686, 0.952941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="couchLine" type="ColorRect" parent="."]
+offset_left = 45.0
+offset_top = 425.0
+offset_right = 845.0
+offset_bottom = 432.0
+color = Color(0.580392, 0.815686, 0.952941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="lampLine" type="ColorRect" parent="."]
+offset_left = 53.0
+offset_top = 282.0
+offset_right = 853.0
+offset_bottom = 289.0
+color = Color(0.580392, 0.815686, 0.952941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="paintingLine" type="ColorRect" parent="."]
+offset_left = 70.0
+offset_top = 705.0
+offset_right = 870.0
+offset_bottom = 712.0
+color = Color(0.580392, 0.815686, 0.952941, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Flower2" type="Sprite2D" parent="."]
+position = Vector2(928, 972)
+scale = Vector2(0.466154, 0.466154)
+texture = ExtResource("3_xs8ro")
+
+[node name="Flowers2" type="Sprite2D" parent="."]
+position = Vector2(-9, -16.9999)
+scale = Vector2(0.273333, 0.273333)
+texture = ExtResource("4_mdy6d")

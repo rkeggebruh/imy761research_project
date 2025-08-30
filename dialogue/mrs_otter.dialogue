@@ -5,7 +5,7 @@ Cappy: [[Hi|Hello|Howdy]]!
 set State.is_in_dialog = false
 
 if !(State.twiceRadio and State.twiceLamp and State.twiceTv and State.twiceCoatRack and State.twiceCouch):
-	Mrs Otter: Hmm, not so fast Cappy. You still need to practice a few more items before you can buy something.
+	Mrs Otter: Hmm, not so fast Cappy. You are not quite done learning yet.
 	
 	Cappy: Oh okay, I’ll go back and finish those first!
 	=> END
