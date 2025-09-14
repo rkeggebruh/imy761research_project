@@ -8,7 +8,7 @@ func _ready():
 	$Perchero.hide()
 
 func _process(delta):
-	if State.coatRackFillInLettersTimeOn || State.lettercoatRackECorrectOff:
+	if State.coatRackFillInLettersTimeOn || State.coatRackFillInLettersTimeOff:
 		State.is_in_dialog = true
 		$Perchero.hide()
 
