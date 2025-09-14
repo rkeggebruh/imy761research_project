@@ -56,6 +56,9 @@ func _process(_delta):
 	$bench_input_off.position.x = $environmental_objects/Cappy.position.x
 	$bench_input_off.position.y = $environmental_objects/Cappy.position.y
 	
+	$gameFinished.position.x = $environmental_objects/Cappy.position.x
+	$gameFinished.position.y = $environmental_objects/Cappy.position.y
+	
 	
 	if (State.boomBoxFillInLettersOnCorrect && !enterOnce):
 		enterOnce = true

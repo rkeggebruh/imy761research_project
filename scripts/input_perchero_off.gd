@@ -24,6 +24,7 @@ func _process(_delta):
 		State.coatRackFillInLettersTimeOff = false
 		State.coatRackFillInLettersOffCorrect = true
 		State.twiceCoatRack = true
+		State.is_in_dialog = false
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D.hide()
@@ -50,4 +51,4 @@ func _on_line_edit2_focus_exited() -> void:
 
 func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	$".".hide()
-	State.is_in_dialog = false
+	#State.is_in_dialog = false
