@@ -72,18 +72,19 @@
 set State.is_in_dialog = true
 Cappy: [[Hi|Hello|Howdy]]!
 
-set State.twiceRadio = true
-set State.twiceLamp = true
-set State.twiceTv = true
-set State.twiceCoatRack = true
-set State.twiceCouch = true
-set State.twiceBench = true
+#set State.twiceRadio = true
+#set State.twiceLamp = true
+#set State.twiceTv = true
+#set State.twiceCoatRack = true
+#set State.twiceCouch = true
+#set State.twiceBench = true
 
-set State.is_in_dialog = false
+#set State.is_in_dialog = false
 
 if !(State.twiceRadio and State.twiceLamp and State.twiceTv and State.twiceCoatRack and State.twiceCouch):
 	Mrs Otter: Hmm, not so fast Cappy. You are not quite done learning yet.
 	Cappy: Oh okay, I’ll go back and finish those first!
+	set State.is_in_dialog = false
 	=> END
 else:
 	Mrs Otter: Well done Cappy, you completed everything! Let’s buy your furniture together.

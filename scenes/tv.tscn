@@ -186,7 +186,7 @@ stream = ExtResource("7_4knv4")
 volume_db = 10.0
 
 [node name="Televisión" type="Sprite2D" parent="."]
-modulate = Color(0.560784, 0.956863, 0.8, 1)
+modulate = Color(0.315038, 0.761282, 0.60161, 1)
 z_index = 6
 position = Vector2(-18, -14)
 scale = Vector2(0.461722, 0.461722)

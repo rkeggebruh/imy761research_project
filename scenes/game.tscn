@@ -531,14 +531,14 @@ scale = Vector2(2.5, 2.5)
 polygon = PackedVector2Array(723, -182, 724, 9, 764, 94, 870, 102, 919, 79, 945, 28, 929, -225, 882, -235, 839, -228, 815, -206)
 
 [node name="boomBox" parent="environmental_objects" instance=ExtResource("10_kvpfn")]
-position = Vector2(-351, -450)
+position = Vector2(-351, -519)
 scale = Vector2(0.4, 0.4)
 
 [node name="Actionable" parent="environmental_objects/boomBox" instance=ExtResource("4_p57ef")]
 dialogue_resource = ExtResource("13_v2yb1")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="environmental_objects/boomBox/Actionable"]
-polygon = PackedVector2Array(-117.5, -275, -200, -130, -325, -55, -327.5, 5, -245, 72.5, 267.5, 67.5, 337.5, -15, 272.5, -125, 207.5, -125, 135, -275)
+polygon = PackedVector2Array(-117.5, -275, -200, -130, -182.5, 340, 182.5, 330, 207.5, -125, 135, -275)
 
 [node name="Lamp" parent="environmental_objects" instance=ExtResource("11_dinhu")]
 position = Vector2(231, -20)
@@ -1021,5 +1021,6 @@ z_index = 4096
 visible = false
 
 [node name="bench_input_off" parent="." instance=ExtResource("49_8qswn")]
+visible = false
 
 [connection signal="ready" from="." to="." method="_on_ready"]

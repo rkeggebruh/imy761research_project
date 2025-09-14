@@ -9,8 +9,9 @@ func _ready():
 func _process(delta) -> void:
 	if (State.BenchFillInLettersTimeOn && inBench):
 		$"El banco".hide()
-	else:
-		$"El banco".show()
+	
+	if(State.BenchFillInLettersTimeOff && inBench):
+		$"El banco".hide()
 
 func _on_bench_area_area_entered(area: Area2D) -> void:
 	if(area.name == "cappy"):

@@ -262,7 +262,7 @@ theme_override_fonts/font = ExtResource("1_eorod")
 theme_override_font_sizes/font_size = 43
 text = "How to Play:
 - Look for objects with glowing outlines—these are the furniture pieces you can interact with.
-- Press E to examine them.
+- Press E to interact with them.
 - You’ll get two chances to fill in the blanks and learn the Spanish word for that object.
 - Once you’ve learned the word, go speak to Mrs. Otter. She’ll let you buy the furniture and add it to your new home.
 Goal: Help Cappy furnish the house by learning the names of everyday items—knowledge unlocks comfort!"

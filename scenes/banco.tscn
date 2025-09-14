@@ -119,6 +119,7 @@ polygon = PackedVector2Array(158, -12, 134, 17, 142, 148, 118, 211, 122, 267, 69
 polygon = PackedVector2Array(180, 153, 149, 209, 670, 214, 650, 148)
 
 [node name="El banco" type="Sprite2D" parent="."]
+z_index = 5
 position = Vector2(402, -73)
 scale = Vector2(0.416256, 0.416256)
 texture = ExtResource("4_psy4j")

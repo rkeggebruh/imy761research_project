@@ -129,6 +129,7 @@ libraries = {
 
 [node name="Lámpara" type="Sprite2D" parent="."]
 modulate = Color(0.924029, 0.978865, 0.973182, 1)
+z_index = 5
 position = Vector2(-8, -566)
 texture = ExtResource("5_f3gd7")
 
@@ -139,3 +140,4 @@ volume_db = 10.0
 [connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="area_entered" from="lampArea" to="." method="_on_lamp_area_area_entered"]
 [connection signal="area_exited" from="lampArea" to="." method="_on_lamp_area_area_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
