@@ -25,3 +25,8 @@ func _on_coat_rack_area_area_exited(area: Area2D) -> void:
 		inCoatRack = false
 		$outline.hide()
 		$AnimationPlayer.play("fadeOut")
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if(anim_name == "fadeOut"):
+		$Perchero.hide()

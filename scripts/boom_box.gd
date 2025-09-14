@@ -26,3 +26,8 @@ func _on_boombox_area_area_exited(area: Area2D) -> void:
 		$AnimationPlayer.play("out")
 		$EaselOutline.hide()
 		#$outline.hide()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if(anim_name == "out"):
+		$LaRadio.hide()

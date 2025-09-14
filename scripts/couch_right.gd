@@ -8,7 +8,6 @@ func _process(delta):
 	if State.CRFillInLettersTimeSleep:
 		$"ElSofá".hide()
 
-
 func _on_couch_right_area_area_entered(area: Area2D) -> void:
 	if(area.name == "cappy"):
 		$"ElSofá".show()
@@ -21,3 +20,8 @@ func _on_couch_right_area_area_exited(area: Area2D) -> void:
 	if(area.name == "cappy"):
 		$AnimationPlayer.play("out")
 		$outline.hide()
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	if(anim_name == "out"):
+		$"ElSofá".hide()

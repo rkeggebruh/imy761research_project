@@ -11,6 +11,7 @@ var second = false
 func _on_ready() -> void:
 	$cappy_sleeping.hide()
 	$gameFinished.hide()
+	$environmental_objects/Cappy/counter.hide()
 
 func _process(_delta):
 	if State.gameFinished:
@@ -100,5 +101,6 @@ func _process(_delta):
 		enterOnceSecondIns = true
 	elif State.showSecondInstruction && State.instructionsShowing && Input.is_action_just_released("ui_accept"):
 		print("hiiiiiiiiiiide instructions")
+		$environmental_objects/Cappy/counter.show()
 		State.instructionsShowing = false
 		State.hideInstructions = true
