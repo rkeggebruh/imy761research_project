@@ -8,6 +8,7 @@ var enterOnce = false
 func _ready():
 	$".".hide()
 	$"Excelente!".hide()
+	State.is_in_dialog = true
 	
 	line_edit.text_submitted.connect(_on_line_editText_entered)
 	line_edit2.text_submitted.connect(_on_line_editText2_entered)
@@ -23,7 +24,7 @@ func _process(_delta):
 	if State.letterCRCorrectL && State.letterCRCorrectO:
 		State.CRFillInLettersTimeSleepCorrect = true
 		State.CRFillInLettersTimeSleep = false
-		State.cappySleeping = true
+		#State.cappySleeping = true
 		$"Excelente!".show()
 		$AnimationPlayer.play("anim")
 		$Line2D2.hide()

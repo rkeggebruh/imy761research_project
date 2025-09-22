@@ -124,3 +124,9 @@ var coatRackPurchased = true
 
 
 var gameFinished = false
+
+func _process(delta):
+	if cappySleeping || lampFillInLettersTimeOff || lampFillInLettersTimeOn || boomBoxFillInLettersTimeOff || boomBoxFillInLettersTimeOn || CRFillInLettersTimeSleepTwo || CRFillInLettersTimeSleep || BenchFillInLettersTimeOff || BenchFillInLettersTimeOn || FillInTVLetterTime || FillInTVLetterTimeTVOFF:
+		is_in_dialog = true
+	else:
+		is_in_dialog = false

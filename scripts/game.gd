@@ -3,6 +3,7 @@ extends Node2D
 
 var enterOnce = false
 var enterOnceCouch = false
+var enterOnceCouchTwo = false
 
 var enterOnceSecondIns = false
 
@@ -81,7 +82,8 @@ func _process(_delta):
 		State.CRFillInLettersTimeSleepCorrect = false
 		$environmental_objects/Cappy.hide()
 	
-	if State.cappySleeping && Input.is_action_just_pressed("ui_accept"):
+	if State.cappySleeping && Input.is_action_just_pressed("ui_accept") && !enterOnceCouchTwo:
+		enterOnceCouchTwo = true
 		print("sleeeeeeeeeeeeping and now wake up ")
 		$cappy_sleeping.hide()
 		State.is_in_dialog = false

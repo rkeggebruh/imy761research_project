@@ -6,7 +6,7 @@ if State.twiceCouch:
 	Mari: Me thinks its buy time
 	set State.is_in_dialog = false
 else:
-	if State.CRFillInLettersTimeSleepCorrect:
+	if State.CRFillInLettersTimeSleepCorrect && not State.cappySleeping:
 		Mari: Another nap?
 		Mari: fill in the letters then...
 		set State.CRFillInLettersTimeSleepTwo = true

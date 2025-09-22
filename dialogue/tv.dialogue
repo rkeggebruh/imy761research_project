@@ -2,7 +2,7 @@
 set State.is_in_dialog = true
 
 if State.twiceTv:
-	Mari: Cappy, you know all about the [wave]Lampara[/wave].
+	Mari: Cappy, you know all about the [wave]Table[/wave].
 	Mari: Me thinks its buy time
 	set State.is_in_dialog = false
 else:

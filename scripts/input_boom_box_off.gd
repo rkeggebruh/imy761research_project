@@ -10,6 +10,7 @@ var enterOnce = false
 func _ready():
 	$".".hide()
 	$"Excelente!".hide()
+	State.is_in_dialog = true
 	
 	line_edit.text_submitted.connect(_on_line_editText_entered)
 	line_edit.focus_exited.connect(_on_line_edit_focus_exited)

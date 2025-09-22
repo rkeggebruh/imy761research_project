@@ -131,6 +131,7 @@ libraries = {
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_lhulm")
+volume_db = 10.0
 
 [connection signal="area_entered" from="benchArea" to="." method="_on_bench_area_area_entered"]
 [connection signal="area_exited" from="benchArea" to="." method="_on_bench_area_area_exited"]

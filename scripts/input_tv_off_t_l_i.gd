@@ -12,6 +12,7 @@ func _ready():
 	#State.is_in_dialog = true
 	$".".hide()
 	$"Excelente!".hide()
+	State.is_in_dialog = true
 	
 	#if State.inLamp:
 		#$instruction.text = State.lampInstructionInput
