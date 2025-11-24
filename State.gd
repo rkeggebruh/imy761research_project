@@ -116,11 +116,20 @@ var twiceCoatRack = false
 var twiceCouch = false
 var twiceBench = false
 
+var stopMovingRadio = false
+var stopMovingLamp = false
+var stopMovingTV = false
+var stopMovingCR = false
+var stopMovingCouch = false
+var stopMovingBench = false
+
 var paintingPurchased = true
 var lampPurchased = true
 var couchPurchased = true
 var tablePurchased = true
 var coatRackPurchased = true
+
+var inInstructions = false
 
 
 var gameFinished = false
@@ -130,3 +139,11 @@ func _process(delta):
 		is_in_dialog = true
 	else:
 		is_in_dialog = false
+
+#func _ready():
+	#twiceRadio = true
+	#twiceLamp = true
+	#twiceTv = true
+	#twiceCoatRack = true
+	#twiceCouch = true
+	#twiceBench = true

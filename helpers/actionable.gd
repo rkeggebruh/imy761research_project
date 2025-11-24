@@ -5,4 +5,5 @@ extends Area2D
 @export var dialogue_start: String = "start"
 
 func _action() -> void:
-	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)
+	if !State.BenchFillInLettersTimeOn || !State.BenchFillInLettersTimeOff || State.CRFillInLettersTimeSleepTwo || State.CRFillInLettersTimeSleep:
+		DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)

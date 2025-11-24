@@ -7,9 +7,11 @@ if State.twiceTv:
 	set State.is_in_dialog = false
 else:
 	if State.tvOn == true:
+		
 		Mari: Another shot at the table, I need you to fill in the missing letters for me...
 		set State.FillInTVLetterTimeTVOFF = true
 	else:
+		
 		set State.is_in_dialog = true
 		Mari: Ah Cappy, do you want to learn how to say table?
 		Cappy: Si, I would love to learn the table

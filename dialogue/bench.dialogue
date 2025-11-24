@@ -9,10 +9,12 @@ else:
 	if State.BenchFillInLettersTimeOnCorrect:
 		Mari: Take another go at the bench Cappy...
 		set State.BenchFillInLettersTimeOff = true
+		
 	else:
 		Mari: This is the bench Cappy.
 		Mari: Take a try at spelling it...
 		set State.BenchFillInLettersTimeOn = true
+		
 
 set State.is_in_dialog = false
 => END

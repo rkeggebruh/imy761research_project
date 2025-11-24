@@ -15,13 +15,13 @@
 [ext_resource type="AudioStream" uid="uid://de0y03m51g4t5" path="res://audio/Star Covered Sky.mp3" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://d1d0jgm407loh" path="res://scenes/boom_box.tscn" id="10_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://bd8p25kavhp0u" path="res://scenes/lamp.tscn" id="11_dinhu"]
-[ext_resource type="Resource" uid="uid://dk5kjr52iofxn" path="res://dialogue/Lamp.dialogue" id="12_kvuet"]
 [ext_resource type="Resource" uid="uid://ck47jx85k345o" path="res://dialogue/couch_right.dialogue" id="12_nepv3"]
 [ext_resource type="Resource" uid="uid://dkdxq1g3s8rlg" path="res://dialogue/radio.dialogue" id="13_v2yb1"]
 [ext_resource type="PackedScene" uid="uid://cat6bf5o1pag8" path="res://scenes/river.tscn" id="15_1kice"]
 [ext_resource type="PackedScene" uid="uid://cburbl1chb524" path="res://scenes/input.tscn" id="15_ca42v"]
 [ext_resource type="PackedScene" uid="uid://bqt4d8cjhrkpe" path="res://scenes/tree_2.tscn" id="16_5newe"]
 [ext_resource type="Texture2D" uid="uid://cfbsqkfj1585j" path="res://assets/environment/Bamboo2.PNG" id="16_rysoc"]
+[ext_resource type="Resource" uid="uid://dk5kjr52iofxn" path="res://dialogue/lamp.dialogue" id="17_8qswn"]
 [ext_resource type="PackedScene" uid="uid://bjhfsh32a4pq3" path="res://scenes/coat_rack.tscn" id="17_37s47"]
 [ext_resource type="Texture2D" uid="uid://cr8hp4xn4skiw" path="res://assets/environment/bamboo.PNG" id="17_ssvqc"]
 [ext_resource type="Texture2D" uid="uid://b2pf4j12su6y6" path="res://assets/environment/watered.png" id="18_sww3w"]
@@ -153,9 +153,9 @@ size = Vector2(3410.5, 40.9998)
 
 [sub_resource type="Curve2D" id="Curve2D_v2yb1"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -80, 7.5, 0, 0, 0, 0, -607.5, -62.5, 0, 0, 0, 0, -975, -37.5, 0, 0, 0, 0, -917.5, 172.5, 0, 0, 0, 0, -382.5, 337.5, 0, 0, 0, 0, 285, 420, 0, 0, 0, 0, 807.5, 157.5, 0, 0, 0, 0, 1110, -137.5, 0, 0, 0, 0, 590, -115, 0, 0, 0, 0, -80, 12.5)
+"points": PackedVector2Array(0, 0, 0, 0, -80, 7.5, 0, 0, 0, 0, -487.5, 135, 0, 0, 0, 0, -382.5, 337.5, 0, 0, 0, 0, 182.5, 285, 0, 0, 0, 0, 437.5, -57.5, 0, 0, 0, 0, -80, 12.5)
 }
-point_count = 10
+point_count = 6
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gee14"]
 radius = 220.737
@@ -455,7 +455,7 @@ position = Vector2(1877.5, -1257.5)
 scale = Vector2(0.5, 0.5)
 
 [node name="Path2D" type="Path2D" parent="environmental_objects"]
-position = Vector2(424, 249)
+position = Vector2(609, 265)
 scale = Vector2(0.4, 0.4)
 curve = SubResource("Curve2D_v2yb1")
 
@@ -546,7 +546,7 @@ scale = Vector2(0.3, 0.3)
 
 [node name="Actionable" parent="environmental_objects/Lamp" instance=ExtResource("4_p57ef")]
 position = Vector2(56.6667, 316.667)
-dialogue_resource = ExtResource("12_kvuet")
+dialogue_resource = ExtResource("17_8qswn")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="environmental_objects/Lamp/Actionable"]
 position = Vector2(-60.0001, -256.667)
@@ -817,6 +817,7 @@ polygon = PackedVector2Array(160, -9.09091, 136.364, 20, 141.818, 150.909, 123.6
 
 [node name="mainGameSoundtrack" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_0tnpc")
+volume_db = -10.0
 autoplay = true
 parameters/looping = true
 

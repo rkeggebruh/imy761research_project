@@ -26,6 +26,7 @@ func _process(_delta):
 		State.lampFillInLettersOffCorrect = true
 		State.lampFillInLettersTimeOff = false
 		State.twiceLamp = true
+		State.is_in_dialog = false
 		$"Excelente!".show()
 		$AnimationPlayerlampoff.play("anim")
 		$Line2D.hide()
@@ -36,10 +37,12 @@ func _process(_delta):
 		$instruction2.hide()
 
 func _on_line_editText_entered(text: String) -> void:
+	State.is_in_dialog = true
 	if State.lampFillInLettersTimeOff && text == "a":
 		State.letterLampACorrectOff = true
 
 func _on_line_editText2_entered(text: String) -> void:
+	State.is_in_dialog = true
 	if State.lampFillInLettersTimeOff && text == "r":
 		State.letterLampRCorrectOff = true
 

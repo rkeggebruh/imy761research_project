@@ -7,11 +7,13 @@ if State.twiceRadio:
 	set State.is_in_dialog = false
 else:
 	if State.radioOn == true:
+		
 		Mari: Do you want to learn what a painting is?
 		Cappy: Si
 		Mari: I need you to fill in the missing letters for me...
 		set State.boomBoxFillInLettersTimeOff = true
 	else:
+		
 		Mari: Ah Cappy, more practice, you know what to do!
 		set State.boomBoxFillInLettersTimeOn = true
 

@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://c8me5rsquc7v6" path="res://scripts/input_boom_box_off.gd" id="1_l6flh"]
 [ext_resource type="FontFile" uid="uid://du2qhjejgfbpx" path="res://assets/fonts/IndieFlower-Regular.ttf" id="3_1lk4n"]
 [ext_resource type="Texture2D" uid="uid://xy1skntcqxr0" path="res://assets/textLabels/Excelente!.png" id="4_0ubnl"]
-[ext_resource type="Texture2D" uid="uid://dqjgioclflfyt" path="res://assets/furniture/boomBox.png" id="4_pfj1v"]
+[ext_resource type="Texture2D" uid="uid://bacey2nc3hwcd" path="res://assets/furniture/easel_state4.png" id="4_pfj1v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lk4n"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
